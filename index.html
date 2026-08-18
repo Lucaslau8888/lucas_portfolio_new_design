@@ -6,7 +6,8 @@
   <meta name="description" content="Lau Jia Yuan — IT Student Portfolio">
   <title>Lau Jia Yuan — Information Technology</title>
     <link rel="stylesheet" href="style.css">
-
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
 <header class="site-header">
@@ -83,8 +84,8 @@
   <div class="about-layout">
     <div class="about-photo-wrap">
       <div class="about-photo">
-        <img src="images/Profile_Pic.jpg" alt="Lau Jia Yuan"
-             onerror="this.style.display='none';this.parentElement.classList.add('photo-placeholder')">
+        <img src="images/nyp.png" alt="Lau Jia Yuan"
+             onerror="this.style.display='none';this.parentElement.classList.add('photo-placeholder')" style="object-fit:fill;">
 <!--        <div class="placeholder-text"><b>Add another photo</b><small>your img</small></div>-->
       </div>
 <!--      <span class="photo-caption">A little more about me</span>-->
@@ -130,7 +131,7 @@
     <div class="section-number">02</div>
     <div>
       <p>SKILLS</p>
-      <h2>What I use to<br><em>build things.</em></h2>
+      <h2>Skills I’ve picked up<br><em>along the way.</em></h2>
     </div>
   </div>
 
@@ -146,8 +147,8 @@
         <div class="skill-index">01</div>
         <div>
           <h3>Frontend Development</h3>
-          <p>Creating responsive, clean and user-friendly websites.</p>
-          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+          <p>Designing simple and friendly websites that are easy to use and understand.</p>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>Bootstrap</span></div>
         </div>
       </article>
 
@@ -155,8 +156,15 @@
         <div class="skill-index">02</div>
         <div>
           <h3>Backend Development</h3>
-          <p>Building application logic, APIs and services.</p>
-          <div class="tags"><span>C#</span><span>ASP.NET</span><span>REST API</span></div>
+          <p>Building simple and reliable applications, APIs and AI solutions.</p>
+          <div class="tags">
+            <span>C#</span>
+            <span>ASP.NET</span>
+            <span>Python</span>
+            <span>Node.js</span>
+            <span>Jinja</span>
+
+          </div>
         </div>
       </article>
 
@@ -165,7 +173,11 @@
         <div>
           <h3>Database</h3>
           <p>Working with data and connecting applications to databases.</p>
-          <div class="tags"><span>MySQL</span><span>Entity Framework</span></div>
+          <div class="tags">
+            <span>MySQL</span>
+            <span>SQLite</span>
+            <span>Entity Framework</span>
+          </div>
         </div>
       </article>
 
@@ -173,8 +185,26 @@
         <div class="skill-index">04</div>
         <div>
           <h3>Development Tools</h3>
-          <p>Tools that help me build, test and manage my projects.</p>
-          <div class="tags"><span>Git</span><span>GitHub</span><span>VS Code</span></div>
+          <p>Tools I use to design, build and manage my projects.</p>
+          <div class="tags">
+            <span>Git</span>
+            <span>GitHub</span>
+            <span>VS Code</span>
+            <span>Figma</span>
+          </div>
+        </div>
+      </article>
+
+
+      <article>
+        <div class="skill-index">05</div>
+        <div>
+          <h3>AI & Machine Learning</h3>
+          <p>Exploring AI tools to build simple and practical solutions.</p>
+          <div class="tags">
+            <span>Roboflow</span>
+            <span>Anaconda</span>
+          </div>
         </div>
       </article>
     </div>
@@ -192,42 +222,66 @@
 
   <article class="project">
     <div class="project-image">
-      <img src="images/uplay.jpg" alt="UPlay project screenshot"
-           onerror="this.style.display='none';this.parentElement.classList.add('photo-placeholder')">
-      <div class="placeholder-text"><b>Add UPlay screenshot</b><small>images/uplay.jpg</small></div>
+      <img src="images/mindlink_web.png" alt="UPlay project screenshot"
+           onerror="this.style.display='none';this.parentElement.classList.add('photo-placeholder')" >
+<!--      <div class="placeholder-text"><b>Add UPlay screenshot</b><small>images/uplay.jpg</small></div>-->
       <span class="project-badge">01</span>
     </div>
+
+
     <div class="project-copy">
-      <p class="project-type">FULL-STACK APPLICATION · 2026</p>
-      <h3>UPlay</h3>
+        <p class="project-type">WEB DEVELOPMENT · INTERNSHIP</p>
+      <h3>Mindlink Groups Website</h3>
       <p>
-        A full-stack application developed as part of my studies.
-        It brings together a frontend interface, backend services and
-        a MySQL database into one complete project.
+           Enhanced the company's Odoo website during my NYP internship by
+    developing an agent management system, digital business cards,
+    an e-submit workflow, and calendar reminders for rental agreements.
+    These features helped simplify administrative tasks and reduce
+    manual work.
       </p>
-      <div class="tags"><span>C#</span><span>ASP.NET</span><span>MySQL</span></div>
-      <a class="project-link" href="#">View project <span>↗</span></a>
+<div class="tags">
+    <span>Python</span>
+    <span>JavaScript</span>
+    <span>XML</span>
+    <span>CSS</span>
+    <span>Bootstrap</span>
+    <span>Odoo</span>
+    </div>
+
+<!--  <a class="project-link" href="#">View project <span>↗</span></a>-->
     </div>
   </article>
 
   <article class="project project-reverse">
     <div class="project-image">
-      <img src="images/project-02.jpg" alt="Second project screenshot"
-           onerror="this.style.display='none';this.parentElement.classList.add('photo-placeholder')">
-      <div class="placeholder-text"><b>Add project screenshot</b><small>images/project-02.jpg</small></div>
+      <img src="images/AI.png" alt="Second project screenshot"
+           onerror="this.style.display='none';this.parentElement.classList.add('photo-placeholder')"      style="object-fit: fill;">
+<!--      <div class="placeholder-text"><b>Add project screenshot</b><small>images/project-02.jpg</small></div>-->
       <span class="project-badge">02</span>
     </div>
-    <div class="project-copy">
-      <p class="project-type">WEB DEVELOPMENT · 2026</p>
-      <h3>Another project</h3>
-      <p>
-        This space is ready for another project you want to showcase.
-        You can explain what you built, why you built it and what
-        technologies you used.
-      </p>
-      <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-      <a class="project-link" href="#">View project <span>↗</span></a>
-    </div>
+
+
+   <div class="project-copy">
+  <p class="project-type">AI & WEB DEVELOPMENT · 2026</p>
+  <h3>I@FAD - AI Feed Dispenser</h3>
+  <p>
+    A Final Year Project developed at Nanyang Polytechnic to automate fish
+    feeding using AI. I worked on improving pellet detection, preparing
+    training data, and testing the AI under different conditions.
+    I also developed a user-friendly web interface for managing feeding
+    schedules and limits, with feeding activity charts and email alerts.
+  </p>
+  <div class="tags">
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+    <span>Python</span>
+    <span>AI</span>
+    <span>Roboflow</span>
+  </div>
+<!--  <a class="project-link" href="#">View project <span>↗</span></a>-->
+</div>
+
   </article>
 </section>
 
@@ -240,10 +294,26 @@
       If you would like to know more about me, my projects or what I’m learning,
       feel free to reach out.
     </p>
-    <a class="email-link" href="mailto:your@email.com">your@email.com <span>↗</span></a>
+<div style="display:flex; flex-direction:column; gap:12px;">
 
+  <a class="email-link" href="mailto:jiayuanlau2222@email.com">
+    <i class="fa-solid fa-envelope"></i>
+    &nbsp;jiayuanlau2222@email.com <span>↗</span>
+  </a>
+
+  <a class="email-link" href="https://www.linkedin.com/in/YOUR-USERNAME/" target="_blank">
+    <i class="fa-brands fa-linkedin"></i>
+    &nbsp;LinkedIn <span>↗</span>
+  </a>
+
+  <a class="email-link" href="https://www.instagram.com/YOUR-USERNAME/" target="_blank">
+    <i class="fa-brands fa-instagram"></i>
+    &nbsp;Instagram <span>↗</span>
+  </a>
+
+</div>
     <footer>
-      <span>Lau Jia Yuan · IT Student</span>
+      <span>Lau Jia Yuan</span>
       <span>Designed &amp; built by Lau Jia Yuan</span>
       <span>© 2026</span>
     </footer>
