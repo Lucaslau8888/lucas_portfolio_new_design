@@ -1369,7 +1369,7 @@ footer {
 
 .education-timeline {
   position: relative;
-  margin-top: 35px;
+  margin-top: 30px;
   padding-left: 25px;
 }
 
@@ -1405,7 +1405,7 @@ footer {
   height: 9px;
   border-radius: 50%;
   background: var(--green-dark);
-  border: 4px solid var(--bg);
+  border: 5px solid var(--bg);
   box-sizing: content-box;
   z-index: 1;
 }
@@ -1452,7 +1452,7 @@ footer {
 @media (max-width: 800px) {
 
   .education-timeline {
-    margin-top: 25px;
+    margin-top: 30px;
     padding-left: 25px;
   }
 
