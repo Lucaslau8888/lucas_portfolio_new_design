@@ -526,7 +526,7 @@ a {
 .projects-intro {
   max-width:var(--max);
   margin:0px;
-  padding:0px;
+  padding:10px;
   border:none !important;
   box-shadow:none !important;
 }
@@ -1146,7 +1146,7 @@ footer {
   /* Projects page introduction */
 
   .projects-intro {
-    padding:0px;
+    padding:10px;
   }
 
   .projects-intro h1 {
