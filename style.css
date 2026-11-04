@@ -1105,7 +1105,7 @@ footer {
 
   .page-hero {
     padding:75px 18px 65px;
-    border-bottom:none;
+    border:none!important;
   }
 
   .page-hero h1 {
