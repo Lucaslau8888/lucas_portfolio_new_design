@@ -1081,6 +1081,7 @@ footer {
 
   .section {
     padding:50px 28px;
+    border: 1px solid grey;
   }
 
   .section-soft {
