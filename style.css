@@ -1498,3 +1498,19 @@ footer {
   }
 }
 
+
+/* Remove unwanted underline in Work Experience */
+.resume-block .resume-entry {
+  border-top: none;
+  padding-top: 0;
+}
+/* Resume page hero spacing */
+.page-hero {
+  padding-bottom: 45px;
+}
+
+.page-hero .hero-description {
+  margin-bottom: 0;
+}
+
+
