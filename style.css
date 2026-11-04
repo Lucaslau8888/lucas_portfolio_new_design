@@ -1129,10 +1129,8 @@ footer {
     font-size:12px;
   }
 
-  .large-copy {
-    font-size:18px;
-    line-height:1.5;
-  }
+
+    
 
   .about-facts {
     grid-template-columns:1fr;
