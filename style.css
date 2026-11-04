@@ -625,7 +625,7 @@ a {
   max-width:var(--max);
   margin:auto;
   padding:105px 20px 95px;
-  border-bottom:none;
+  border-bottom:none!important;
 }
 
 .page-hero h1 {
