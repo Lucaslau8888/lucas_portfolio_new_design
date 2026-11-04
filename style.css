@@ -586,11 +586,11 @@ img {
 
 .section-heading {
 
-  display:grid;
+  display: block;
 
-  grid-template-columns:48px 1fr;
+  width: 100%;
 
-  margin-bottom:40px;
+  margin-bottom: 40px;
 
 }
 
@@ -1812,15 +1812,12 @@ footer {
 
   }
 
-  .section-heading {
-
-    grid-template-columns:32px 1fr;
-
-    margin-bottom:20px;
-
-    border: 1px solid grey;
-
-  }
+.section-heading {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  border: none;
+}
 
   .section-heading h2 {
 
