@@ -1081,7 +1081,7 @@ footer {
 
   .section {
     padding:50px 28px;
-    border: 1px solid grey;
+
   }
 
   .section-soft {
@@ -1092,6 +1092,7 @@ footer {
   .section-heading {
     grid-template-columns:32px 1fr;
     margin-bottom:20px;
+    border: 1px solid grey;
   }
 
   .section-heading h2 {
