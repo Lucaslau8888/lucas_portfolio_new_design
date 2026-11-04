@@ -345,7 +345,7 @@ img {
 .section-heading {
   display:grid;
   grid-template-columns:48px 1fr;
-  margin-bottom:55px;
+  margin-bottom:20px;
 }
 
 .section-number {
@@ -1090,7 +1090,7 @@ footer {
 
   .section-heading {
     grid-template-columns:32px 1fr;
-    margin-bottom:40px;
+    margin-bottom:20px;
   }
 
   .section-heading h2 {
