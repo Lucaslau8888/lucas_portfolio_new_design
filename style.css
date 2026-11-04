@@ -1,4 +1,4 @@
-  @import url('https://fonts.googleapis.com/css2?family=DM+Mono&family=Manrope:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono&family=Manrope:wght@400;500;600;700&display=swap');
 
 /* =================================
    ROOT & GLOBAL
@@ -39,6 +39,10 @@ a {
   color:inherit;
 }
 
+img {
+  max-width:100%;
+}
+
 /* =================================
    HEADER & NAVIGATION
 ================================= */
@@ -71,7 +75,7 @@ a {
 
 .desktop-nav a,
 .header-button {
-  font-size:11px;
+  font-size:12px;
   color:var(--muted);
   transition:.2s;
 }
@@ -106,7 +110,7 @@ a {
   padding:75px 20px 35px;
   display:grid;
   grid-template-columns:1fr .9fr;
-  gap:70px;
+  gap:60px;
   align-items:center;
 }
 
@@ -115,7 +119,7 @@ a {
 }
 
 .eyebrow {
-  font:9px "DM Mono",monospace;
+  font:10px "DM Mono",monospace;
   letter-spacing:.09em;
   color:var(--muted);
 }
@@ -130,7 +134,7 @@ a {
 }
 
 .hero h1 {
-  font-size:clamp(48px,6vw,76px);
+  font-size:clamp(48px,6vw,72px);
   line-height:1.02;
   letter-spacing:-.075em;
   font-weight:700;
@@ -166,7 +170,7 @@ a {
   display:inline-block;
   padding:10px 16px;
   border-radius:8px;
-  font-size:10px;
+  font-size:11px;
   font-weight:600;
   transition:.25s;
 }
@@ -193,7 +197,7 @@ a {
 /* Hero image */
 
 .hero-visual {
-  min-height:500px;
+  min-height:480px;
   position:relative;
   display:grid;
   place-items:center;
@@ -205,16 +209,16 @@ a {
 }
 
 .shape-back {
-  width:360px;
-  height:360px;
+  width:350px;
+  height:350px;
   background:#e5eacb;
   top:8%;
   right:5%;
 }
 
 .shape-front {
-  width:105px;
-  height:105px;
+  width:100px;
+  height:100px;
   background:var(--orange);
   bottom:10%;
   left:8%;
@@ -327,7 +331,7 @@ a {
 .section {
   max-width:var(--max);
   margin:auto;
-  padding:120px 20px;
+  padding:100px 20px;
   border-top:1px solid var(--line);
 }
 
@@ -341,23 +345,23 @@ a {
 .section-heading {
   display:grid;
   grid-template-columns:48px 1fr;
-  margin-bottom:65px;
+  margin-bottom:55px;
 }
 
 .section-number {
-  font:9px "DM Mono",monospace;
+  font:10px "DM Mono",monospace;
   color:var(--green-dark);
 }
 
 .section-heading p {
-  font:9px "DM Mono",monospace;
+  font:10px "DM Mono",monospace;
   color:var(--muted);
   letter-spacing:.08em;
-  margin-bottom:13px;
+  margin-bottom:12px;
 }
 
 .section-heading h2 {
-  font-size:clamp(37px,4.5vw,56px);
+  font-size:clamp(36px,4.5vw,54px);
   line-height:1.05;
   letter-spacing:-.065em;
   font-weight:600;
@@ -375,7 +379,7 @@ a {
 .about-layout {
   display:grid;
   grid-template-columns:.75fr 1.25fr;
-  gap:80px;
+  gap:65px;
   align-items:start;
 }
 
@@ -399,7 +403,7 @@ a {
 
 .photo-caption {
   display:block;
-  font:8px "DM Mono",monospace;
+  font:9px "DM Mono",monospace;
   color:var(--muted);
   margin-top:10px;
 }
@@ -412,14 +416,14 @@ a {
 
 .large-copy {
   color:var(--text);
-  font-size:22px;
+  font-size:21px;
   line-height:1.5;
   letter-spacing:-.035em;
-  margin-bottom:25px;
+  margin-bottom:22px;
 }
 
 .about-copy>p:not(.large-copy) {
-  margin-bottom:18px;
+  margin-bottom:16px;
 }
 
 .about-facts {
@@ -427,7 +431,7 @@ a {
   grid-template-columns:1fr 1fr 1fr;
   gap:1px;
   background:var(--line);
-  margin-top:32px;
+  margin-top:28px;
   border:1px solid var(--line);
 }
 
@@ -438,13 +442,13 @@ a {
 
 .about-facts span {
   display:block;
-  font:8px "DM Mono",monospace;
+  font:9px "DM Mono",monospace;
   color:var(--muted);
   margin-bottom:5px;
 }
 
 .about-facts strong {
-  font-size:11px;
+  font-size:12px;
   font-weight:600;
 }
 
@@ -457,7 +461,7 @@ a {
   margin:auto;
   display:grid;
   grid-template-columns:.65fr 1.35fr;
-  gap:70px;
+  gap:60px;
   align-items:start;
 }
 
@@ -479,7 +483,7 @@ a {
   display:grid;
   grid-template-columns:40px 1fr;
   gap:15px;
-  padding:21px 0;
+  padding:19px 0;
   border-top:1px solid var(--line);
 }
 
@@ -488,13 +492,13 @@ a {
 }
 
 .skill-index {
-  font:8px "DM Mono",monospace;
+  font:9px "DM Mono",monospace;
   color:var(--green-dark);
   padding-top:4px;
 }
 
 .skill-list h3 {
-  font-size:17px;
+  font-size:16px;
   font-weight:600;
   margin-bottom:3px;
 }
@@ -506,7 +510,7 @@ a {
 
 .tags {
   display:flex;
-  gap:5px;
+  gap:6px;
   flex-wrap:wrap;
   margin-top:13px;
 }
@@ -514,9 +518,9 @@ a {
 .tags span {
   border:1px solid var(--line);
   border-radius:99px;
-  padding:4px 8px;
+  padding:5px 9px;
   background:rgba(255,255,255,.45);
-  font:8px "DM Mono",monospace;
+  font:9px "DM Mono",monospace;
 }
 
 /* =================================
@@ -525,22 +529,22 @@ a {
 
 .projects-intro {
   max-width:var(--max);
-  margin:0px;
-  padding:20px;
+  margin:0 auto;
+  padding:75px 20px 40px;
   border:none !important;
   box-shadow:none !important;
 }
 
 .projects-intro .eyebrow {
-  margin:0;
+  margin:0 0 12px;
 }
 
 .projects-intro h1 {
-  font-size:clamp(48px,6vw,76px);
-  line-height:1.02;
+  font-size:clamp(46px,5.5vw,68px);
+  line-height:1.05;
   letter-spacing:-.075em;
   font-weight:700;
-  margin:20px 0 0;
+  margin:0;
 }
 
 /* =================================
@@ -550,113 +554,37 @@ a {
 .projects-list {
   max-width:var(--max);
   margin:0 auto;
-  padding:0 20px 120px;
+  padding:0 20px 90px;
   border:none !important;
   box-shadow:none !important;
 }
 
-/* Individual project layout */
+/* Individual project */
 
 .projects-list .project {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:65px;
-  align-items:center;
+  display:flex;
+  flex-direction:column;
+  align-items:stretch;
+  gap:24px;
 
   margin:0;
-  padding:65px 0 85px;
+  padding:0 0 55px;
 
   border:none;
   border-bottom:1px solid var(--line);
 }
 
-/* First project has no divider above it */
+/* Spacing between projects */
 
-.projects-list .project:first-child {
-  padding-top:0;
-  border-top:none;
+.projects-list .project + .project {
+  padding-top:55px;
 }
 
-/* Second project image and text reverse */
+/* Remove divider after final project */
 
-.projects-list .project-reverse .project-copy {
-  order:2;
-}
-
-.projects-list .project-reverse .project-image {
-  order:1;
-}
-
-/* Project information */
-
-.projects-list .project-copy {
-  display:flex;
-  flex-direction:column;
-  align-items:flex-start;
-  min-width:0;
-}
-
-/* Number and category */
-
-.projects-list .project-meta {
-  display:flex;
-  align-items:center;
-  gap:14px;
-  margin-bottom:24px;
-}
-
-.projects-list .project-meta .section-number {
-  font:9px "DM Mono",monospace;
-  color:var(--green-dark);
-}
-
-.projects-list .project-type {
-  font:9px "DM Mono",monospace;
-  color:var(--muted);
-  letter-spacing:.07em;
-}
-
-/* Project title */
-
-.projects-list .project-title {
-  font-size:clamp(34px,4vw,50px);
-  line-height:1.08;
-  letter-spacing:-.065em;
-  font-weight:600;
-  margin:0 0 22px;
-}
-
-.projects-list .project-title em {
-  color:var(--green-dark);
-  font-style:normal;
-}
-
-/* Project description */
-
-.projects-list .project-description {
-  width:100%;
-  max-width:500px;
-  color:var(--muted);
-  font-size:13px;
-  line-height:1.85;
-  margin:0;
-}
-
-/* Project technology tags */
-
-.projects-list .tags {
-  display:flex;
-  gap:6px;
-  flex-wrap:wrap;
-  margin-top:22px;
-}
-
-.projects-list .tags span {
-  border:1px solid var(--line);
-  border-radius:99px;
-  padding:5px 9px;
-  background:rgba(255,255,255,.45);
-  font:8px "DM Mono",monospace;
+.projects-list .project:last-child {
+  border-bottom:none;
+  padding-bottom:0;
 }
 
 /* Project image */
@@ -664,9 +592,9 @@ a {
 .projects-list .project-image {
   position:relative;
   width:100%;
-  aspect-ratio:1.3/1;
+  aspect-ratio:16/9;
   overflow:hidden;
-  border-radius:18px;
+  border-radius:16px;
   background:var(--soft);
 }
 
@@ -679,15 +607,90 @@ a {
 
 .projects-list .project-badge {
   position:absolute;
-  top:15px;
-  right:15px;
-  width:31px;
-  height:31px;
+  top:16px;
+  right:16px;
+  width:32px;
+  height:32px;
   display:grid;
   place-items:center;
   border-radius:50%;
   background:#fff;
-  font:8px "DM Mono",monospace;
+  font:9px "DM Mono",monospace;
+}
+
+/* Project information */
+
+.projects-list .project-copy {
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  width:100%;
+  min-width:0;
+}
+
+/* Number and category */
+
+.projects-list .project-meta {
+  display:flex;
+  align-items:center;
+  gap:13px;
+  margin-bottom:12px;
+}
+
+.projects-list .project-meta .section-number {
+  font:10px "DM Mono",monospace;
+  color:var(--green-dark);
+}
+
+.projects-list .project-type {
+  font:10px "DM Mono",monospace;
+  color:var(--muted);
+  letter-spacing:.07em;
+}
+
+/* Project title */
+
+.projects-list .project-title {
+  width:100%;
+  font-size:clamp(32px,3.5vw,44px);
+  line-height:1.12;
+  letter-spacing:-.06em;
+  font-weight:600;
+  margin:0 0 14px;
+}
+
+.projects-list .project-title em {
+  color:var(--green-dark);
+  font-style:normal;
+}
+
+/* Project description */
+
+.projects-list .project-description {
+  display:block;
+  width:100%;
+  max-width:none;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.85;
+  margin:0;
+}
+
+/* Technology tags */
+
+.projects-list .tags {
+  display:flex;
+  gap:7px;
+  flex-wrap:wrap;
+  margin-top:17px;
+}
+
+.projects-list .tags span {
+  border:1px solid var(--line);
+  border-radius:99px;
+  padding:5px 10px;
+  background:rgba(255,255,255,.45);
+  font:9px "DM Mono",monospace;
 }
 
 /* =================================
@@ -697,15 +700,15 @@ a {
 .page-hero {
   max-width:var(--max);
   margin:auto;
-  padding:105px 20px 95px;
+  padding:90px 20px 75px;
   border:none !important;
 }
 
 .page-hero h1 {
-  font-size:clamp(48px,6vw,76px);
-  line-height:1.02;
+  font-size:clamp(46px,5.5vw,68px);
+  line-height:1.05;
   letter-spacing:-.075em;
-  margin:20px 0 12px;
+  margin:16px 0 12px;
 }
 
 .page-hero h1 strong {
@@ -719,25 +722,25 @@ a {
 .testimonial-grid {
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:20px;
+  gap:18px;
 }
 
 .testimonial-card {
   background:var(--paper);
   border:1px solid var(--line);
   border-radius:16px;
-  padding:28px;
+  padding:25px;
 }
 
 .testimonial-mark {
-  font-size:48px;
+  font-size:44px;
   color:var(--green-dark);
 }
 
 .testimonial-card>p {
   color:var(--muted);
   font-size:13px;
-  margin:12px 0 25px;
+  margin:12px 0 22px;
 }
 
 .testimonial-person {
@@ -746,7 +749,7 @@ a {
 }
 
 .testimonial-person strong {
-  font-size:11px;
+  font-size:12px;
 }
 
 .testimonial-person span {
@@ -776,8 +779,8 @@ a {
 .resume-block {
   display:grid;
   grid-template-columns:190px 1fr;
-  gap:45px;
-  padding:38px 0;
+  gap:40px;
+  padding:35px 0;
   border-top:1px solid var(--line);
 }
 
@@ -789,12 +792,12 @@ a {
 
 .resume-label span {
   color:var(--green-dark);
-  font:9px "DM Mono",monospace;
+  font:10px "DM Mono",monospace;
 }
 
 .resume-label p {
   color:var(--muted);
-  font:9px "DM Mono",monospace;
+  font:10px "DM Mono",monospace;
 }
 
 .resume-content {
@@ -802,12 +805,12 @@ a {
 }
 
 .resume-content h2 {
-  font-size:27px;
-  margin-bottom:20px;
+  font-size:25px;
+  margin-bottom:18px;
 }
 
 .resume-entry {
-  padding:18px 0;
+  padding:17px 0;
   border-top:1px solid var(--line);
 }
 
@@ -834,7 +837,7 @@ a {
 .resume-skill-groups {
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:25px;
+  gap:22px;
 }
 
 .resume-skill-groups h3 {
@@ -845,7 +848,7 @@ a {
   display:inline-block;
   margin-top:10px;
   color:var(--green-dark);
-  font-size:11px;
+  font-size:12px;
   font-weight:700;
 }
 
@@ -856,7 +859,7 @@ a {
 .contact {
   background:var(--text);
   color:#fff;
-  padding:105px max(20px,calc((100vw - var(--max))/2));
+  padding:90px max(20px,calc((100vw - var(--max))/2));
 }
 
 .contact-inner {
@@ -865,15 +868,15 @@ a {
 }
 
 .contact-label {
-  font:9px "DM Mono",monospace;
+  font:10px "DM Mono",monospace;
   color:#aeb0a8;
 }
 
 .contact h2 {
-  font-size:clamp(48px,6vw,74px);
+  font-size:clamp(46px,5.5vw,70px);
   line-height:1;
   letter-spacing:-.04em;
-  margin:18px 0 22px;
+  margin:17px 0 20px;
 }
 
 .contact h2 em {
@@ -892,8 +895,8 @@ a {
   color:var(--green);
   border-bottom:1px solid #62655c;
   padding-bottom:7px;
-  margin-top:25px;
-  font-size:18px;
+  margin-top:23px;
+  font-size:17px;
 }
 
 .email-link span {
@@ -910,10 +913,10 @@ footer {
   gap:20px;
   flex-wrap:wrap;
   border-top:1px solid #484b43;
-  margin-top:90px;
+  margin-top:75px;
   padding-top:17px;
   color:#999c94;
-  font:8px "DM Mono",monospace;
+  font:9px "DM Mono",monospace;
 }
 
 /* =================================
@@ -1070,14 +1073,14 @@ footer {
   }
 
   .button {
-    font-size:9px;
+    font-size:10px;
     padding:9px 13px;
   }
 
   /* General sections */
 
   .section {
-    padding:78px 18px;
+    padding:75px 18px;
   }
 
   .section-soft {
@@ -1087,11 +1090,11 @@ footer {
 
   .section-heading {
     grid-template-columns:32px 1fr;
-    margin-bottom:42px;
+    margin-bottom:40px;
   }
 
   .section-heading h2 {
-    font-size:clamp(31px,9vw,43px);
+    font-size:clamp(30px,8vw,42px);
     line-height:1.06;
   }
 
@@ -1100,12 +1103,12 @@ footer {
     font-size:8px;
   }
 
-  /* About, skills and projects */
+  /* About and skills */
 
   .about-layout,
   .skills-layout {
     grid-template-columns:1fr;
-    gap:32px;
+    gap:30px;
   }
 
   .about-photo-wrap {
@@ -1143,51 +1146,63 @@ footer {
     font-size:11px;
   }
 
-  /* Projects page introduction */
+  /* Projects introduction */
 
   .projects-intro {
-    padding:20px;
+    padding:65px 18px 35px;
   }
 
   .projects-intro h1 {
-    font-size:clamp(40px,11vw,55px);
+    font-size:clamp(40px,11vw,54px);
   }
 
-  /* Projects page layout */
+  /* Projects layout */
 
   .projects-list {
-    padding:0 18px 78px;
+    padding:0 18px 65px;
   }
 
-  .projects-list .project,
-  .projects-list .project-reverse {
-    grid-template-columns:1fr;
-    gap:26px;
-    padding:45px 0 55px;
-    margin:0;
+  .projects-list .project {
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    padding:0 0 40px;
   }
 
-  .projects-list .project:first-child {
-    padding-top:0;
+  .projects-list .project + .project {
+    padding-top:40px;
   }
 
-  .projects-list .project-copy,
-  .projects-list .project-reverse .project-copy {
+  .projects-list .project:last-child {
+    padding-bottom:0;
+  }
+
+  .projects-list .project-image {
     order:1;
+    width:100%;
+    aspect-ratio:16/9;
+    border-radius:13px;
   }
 
-  .projects-list .project-image,
-  .projects-list .project-reverse .project-image {
+  .projects-list .project-copy {
     order:2;
+    width:100%;
   }
 
   .projects-list .project-meta {
-    margin-bottom:18px;
+    gap:11px;
+    margin-bottom:10px;
+  }
+
+  .projects-list .project-meta .section-number,
+  .projects-list .project-type {
+    font-size:8px;
   }
 
   .projects-list .project-title {
-    font-size:36px;
-    margin-bottom:16px;
+    font-size:clamp(30px,8vw,38px);
+    line-height:1.1;
+    margin-bottom:13px;
   }
 
   .projects-list .project-description {
@@ -1196,18 +1211,31 @@ footer {
   }
 
   .projects-list .tags {
-    margin-top:17px;
+    margin-top:15px;
+    gap:6px;
+  }
+
+  .projects-list .tags span {
+    font-size:8px;
+    padding:5px 8px;
+  }
+
+  .projects-list .project-badge {
+    top:12px;
+    right:12px;
+    width:29px;
+    height:29px;
   }
 
   /* General page hero */
 
   .page-hero {
-    padding:75px 18px 65px;
+    padding:65px 18px 55px;
     border:none !important;
   }
 
   .page-hero h1 {
-    font-size:clamp(40px,11vw,55px);
+    font-size:clamp(40px,11vw,54px);
   }
 
   /* Testimonials */
@@ -1220,12 +1248,12 @@ footer {
 
   .resume-block {
     grid-template-columns:1fr;
-    gap:18px;
-    padding:28px 0;
+    gap:17px;
+    padding:27px 0;
   }
 
   .resume-content h2 {
-    font-size:23px;
+    font-size:22px;
   }
 
   .resume-skill-groups {
@@ -1236,11 +1264,11 @@ footer {
   /* Contact */
 
   .contact {
-    padding:78px 18px;
+    padding:75px 18px;
   }
 
   .contact h2 {
-    font-size:clamp(39px,11vw,55px);
+    font-size:clamp(38px,10vw,54px);
   }
 
   .contact-text {
@@ -1254,6 +1282,7 @@ footer {
   footer {
     flex-direction:column;
     gap:8px;
+    margin-top:55px;
   }
 }
 
@@ -1301,35 +1330,6 @@ footer {
   }
 
   .projects-list .project-title {
-    font-size:33px;
+    font-size:32px;
   }
-}
-
-/* Project image above description */
-
-.projects-list .project,
-.projects-list .project-reverse,
-.projects-list .project 
- {
-  display:flex;
-  flex-direction:column;
-  align-items:stretch;
-  gap:30px;
-}
-
-.projects-list .project-image {
-  width:100%;
-  aspect-ratio:16 / 9;
-}
-
-.projects-list .project-copy {
-  width:100%;
-}
-
-.projects-list .project-reverse .project-image,
-.projects-list .project-reverse .project-copy,
-.projects-list .project .project-image,
-.projects-list .project .project-copy
- {
-  order:initial;
 }
