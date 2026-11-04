@@ -1,21 +1,41 @@
-
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono&family=Manrope:wght@400;500;600;700&display=swap');
 
 /* =================================
-   ROOT & GLOBAL
+   ROOT & TYPOGRAPHY SYSTEM
 ================================= */
 
 :root {
   --bg:#fbfaf6;
   --paper:#ffffff;
-  --soft:#f3f2eb;
+  --soft:#f1f0e8;
+
   --text:#292b25;
-  --muted:#767970;
+  --muted:#5f6259;
+  --subtle:#74776d;
+
   --line:#deded5;
+
   --green:#c9dc91;
   --green-dark:#4e6540;
-  --orange:#e99470;
+  --orange:#d9825f;
+
   --max:1120px;
+
+  --font-main:"Manrope",Arial,sans-serif;
+  --font-mono:"DM Mono",monospace;
+
+  /* Typography scale */
+
+  --text-xs:11px;
+  --text-sm:13px;
+  --text-base:16px;
+  --text-lg:18px;
+  --text-xl:20px;
+
+  --heading-sm:24px;
+  --heading-md:32px;
+  --heading-lg:44px;
+  --heading-xl:56px;
 }
 
 * {
@@ -31,8 +51,11 @@ html {
 body {
   background:var(--bg);
   color:var(--text);
-  font-family:Manrope,Arial,sans-serif;
+  font-family:var(--font-main);
+  font-size:var(--text-base);
   line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
 }
 
 a {
@@ -42,6 +65,7 @@ a {
 
 img {
   max-width:100%;
+  height:auto;
 }
 
 /* =================================
@@ -76,7 +100,7 @@ img {
 
 .desktop-nav a,
 .header-button {
-  font-size:12px;
+  font-size:13px;
   color:var(--muted);
   transition:.2s;
 }
@@ -120,7 +144,7 @@ img {
 }
 
 .eyebrow {
-  font:10px "DM Mono",monospace;
+  font:11px var(--font-mono);
   letter-spacing:.09em;
   color:var(--muted);
 }
@@ -148,7 +172,7 @@ img {
 
 .hero-role {
   color:var(--green-dark);
-  font-size:16px;
+  font-size:18px;
   font-weight:600;
 }
 
@@ -156,7 +180,7 @@ img {
   max-width:535px;
   margin-top:20px;
   color:var(--muted);
-  font-size:14px;
+  font-size:16px;
   line-height:1.85;
 }
 
@@ -171,7 +195,7 @@ img {
   display:inline-block;
   padding:10px 16px;
   border-radius:8px;
-  font-size:11px;
+  font-size:13px;
   font-weight:600;
   transition:.25s;
 }
@@ -251,7 +275,7 @@ img {
   right:18px;
   display:flex;
   justify-content:space-between;
-  font:8px "DM Mono",monospace;
+  font:10px var(--font-mono);
   letter-spacing:.06em;
 }
 
@@ -277,11 +301,11 @@ img {
 }
 
 .placeholder-text b {
-  font-size:14px;
+  font-size:16px;
 }
 
 .placeholder-text small {
-  font:9px "DM Mono",monospace;
+  font:11px var(--font-mono);
   color:var(--muted);
   margin-top:4px;
 }
@@ -299,13 +323,13 @@ img {
   border:1px solid var(--line);
   border-radius:10px;
   padding:10px 12px;
-  font-size:10px;
+  font-size:13px;
   box-shadow:0 8px 25px rgba(41,43,37,.06);
   transform:rotate(4deg);
 }
 
 .hello-note b {
-  font-size:16px;
+  font-size:18px;
   margin-left:8px;
   color:var(--green-dark);
 }
@@ -315,7 +339,7 @@ img {
   display:flex;
   align-items:center;
   gap:14px;
-  font:8px "DM Mono",monospace;
+  font:11px var(--font-mono);
   color:var(--muted);
 }
 
@@ -350,20 +374,20 @@ img {
 }
 
 .section-number {
-  font:10px "DM Mono",monospace;
+  font:11px var(--font-mono);
   color:var(--green-dark);
 }
 
 .section-heading p {
-  font:10px "DM Mono",monospace;
+  font:11px var(--font-mono);
   color:var(--muted);
   letter-spacing:.08em;
   margin-bottom:12px;
 }
 
 .section-heading h2 {
-  font-size:clamp(36px,4.5vw,54px);
-  line-height:1.05;
+  font-size:clamp(36px,4.5vw,44px);
+  line-height:1.1;
   letter-spacing:-.065em;
   font-weight:600;
 }
@@ -404,7 +428,7 @@ img {
 
 .photo-caption {
   display:block;
-  font:9px "DM Mono",monospace;
+  font:11px var(--font-mono);
   color:var(--muted);
   margin-top:10px;
 }
@@ -412,7 +436,8 @@ img {
 .about-copy {
   max-width:620px;
   color:var(--muted);
-  font-size:13px;
+  font-size:16px;
+  line-height:1.8;
 }
 
 .large-copy {
@@ -443,13 +468,13 @@ img {
 
 .about-facts span {
   display:block;
-  font:9px "DM Mono",monospace;
+  font:11px var(--font-mono);
   color:var(--muted);
   margin-bottom:5px;
 }
 
 .about-facts strong {
-  font-size:12px;
+  font-size:14px;
   font-weight:600;
 }
 
@@ -499,14 +524,14 @@ img {
 
 .skill-index {
   display:block;
-  font:9px "DM Mono",monospace;
+  font:11px var(--font-mono);
   color:var(--green-dark);
   padding-top:4px;
   margin-bottom:8px;
 }
 
 .skill-list h3 {
-  font-size:16px;
+  font-size:20px;
   font-weight:600;
   margin-bottom:5px;
 }
@@ -514,7 +539,7 @@ img {
 .skill-list p {
   display:block;
   width:100%;
-  font-size:12px;
+  font-size:16px;
   color:var(--muted);
   line-height:1.8;
 }
@@ -531,7 +556,7 @@ img {
   border-radius:99px;
   padding:5px 9px;
   background:rgba(255,255,255,.45);
-  font:9px "DM Mono",monospace;
+  font:11px var(--font-mono);
 }
 
 /* =================================
@@ -551,7 +576,7 @@ img {
 }
 
 .projects-intro h1 {
-  font-size:clamp(41px,5.5vw,68px);
+  font-size:clamp(41px,5.5vw,56px);
   line-height:1.05;
   letter-spacing:-.075em;
   font-weight:700;
@@ -616,7 +641,7 @@ img {
   place-items:center;
   border-radius:50%;
   background:#fff;
-  font:9px "DM Mono",monospace;
+  font:11px var(--font-mono);
 }
 
 .projects-list .project-copy {
@@ -635,12 +660,12 @@ img {
 }
 
 .projects-list .project-meta .section-number {
-  font:10px "DM Mono",monospace;
+  font:11px var(--font-mono);
   color:var(--green-dark);
 }
 
 .projects-list .project-type {
-  font:10px "DM Mono",monospace;
+  font:11px var(--font-mono);
   color:var(--muted);
   letter-spacing:.07em;
 }
@@ -664,7 +689,7 @@ img {
   width:100%;
   max-width:none;
   color:var(--muted);
-  font-size:13px;
+  font-size:16px;
   line-height:1.85;
   margin:0;
 }
@@ -681,7 +706,7 @@ img {
   border-radius:99px;
   padding:5px 10px;
   background:rgba(255,255,255,.45);
-  font:9px "DM Mono",monospace;
+  font:11px var(--font-mono);
 }
 
 /* =================================
@@ -696,7 +721,7 @@ img {
 }
 
 .page-hero h1 {
-  font-size:clamp(46px,5.5vw,68px);
+  font-size:clamp(46px,5.5vw,56px);
   line-height:1.05;
   letter-spacing:-.075em;
   margin:16px 0 12px;
@@ -730,7 +755,8 @@ img {
 
 .testimonial-card>p {
   color:var(--muted);
-  font-size:13px;
+  font-size:16px;
+  line-height:1.8;
   margin:12px 0 22px;
 }
 
@@ -740,11 +766,11 @@ img {
 }
 
 .testimonial-person strong {
-  font-size:12px;
+  font-size:14px;
 }
 
 .testimonial-person span {
-  font:9px "DM Mono",monospace;
+  font:11px var(--font-mono);
   color:var(--muted);
 }
 
@@ -783,12 +809,12 @@ img {
 
 .resume-label span {
   color:var(--green-dark);
-  font:10px "DM Mono",monospace;
+  font:11px var(--font-mono);
 }
 
 .resume-label p {
   color:var(--muted);
-  font:10px "DM Mono",monospace;
+  font:11px var(--font-mono);
 }
 
 .resume-content {
@@ -796,7 +822,7 @@ img {
 }
 
 .resume-content h2 {
-  font-size:25px;
+  font-size:24px;
   margin-bottom:18px;
 }
 
@@ -806,12 +832,12 @@ img {
 }
 
 .resume-entry h3 {
-  font-size:16px;
+  font-size:20px;
 }
 
 .resume-entry p,
 .resume-entry li {
-  font-size:12px;
+  font-size:15px;
   color:var(--muted);
   line-height:1.85;
 }
@@ -832,14 +858,14 @@ img {
 }
 
 .resume-skill-groups h3 {
-  font-size:13px;
+  font-size:16px;
 }
 
 .text-link {
   display:inline-block;
   margin-top:10px;
   color:var(--green-dark);
-  font-size:12px;
+  font-size:14px;
   font-weight:700;
 }
 
@@ -859,12 +885,12 @@ img {
 }
 
 .contact-label {
-  font:10px "DM Mono",monospace;
-  color:#aeb0a8;
+  font:11px var(--font-mono);
+  color:#c1c4b9;
 }
 
 .contact h2 {
-  font-size:clamp(46px,5.5vw,70px);
+  font-size:clamp(46px,5.5vw,56px);
   line-height:1;
   letter-spacing:-.04em;
   margin:17px 0 20px;
@@ -877,8 +903,9 @@ img {
 
 .contact-text {
   max-width:500px;
-  color:#b5b7af;
-  font-size:13px;
+  color:#d0d2c9;
+  font-size:16px;
+  line-height:1.8;
 }
 
 .email-link {
@@ -887,7 +914,7 @@ img {
   border-bottom:1px solid #62655c;
   padding-bottom:7px;
   margin-top:23px;
-  font-size:17px;
+  font-size:18px;
 }
 
 .email-link span {
@@ -906,8 +933,8 @@ footer {
   border-top:1px solid #484b43;
   margin-top:75px;
   padding-top:17px;
-  color:#999c94;
-  font:9px "DM Mono",monospace;
+  color:#c1c4b9;
+  font:11px var(--font-mono);
 }
 
 /* =================================
@@ -985,7 +1012,7 @@ footer {
   }
 
   .mobile-nav a {
-    font-size:12px;
+    font-size:14px;
   }
 
   /* Mobile homepage */
@@ -1033,13 +1060,13 @@ footer {
   }
 
   .hello-note {
-    font-size:9px;
+    font-size:12px;
     right:0;
     top:13%;
   }
 
   .eyebrow {
-    font-size:8px;
+    font-size:10px;
   }
 
   .hero h1 {
@@ -1049,11 +1076,11 @@ footer {
   }
 
   .hero-role {
-    font-size:14px;
+    font-size:16px;
   }
 
   .hero-description {
-    font-size:12px;
+    font-size:15px;
     line-height:1.75;
     margin-top:14px;
     max-width:100%;
@@ -1064,7 +1091,7 @@ footer {
   }
 
   .button {
-    font-size:10px;
+    font-size:13px;
     padding:9px 13px;
   }
 
@@ -1087,13 +1114,13 @@ footer {
   }
 
   .section-heading h2 {
-    font-size:clamp(30px,8vw,42px);
+    font-size:clamp(30px,8vw,38px);
     line-height:1.06;
   }
 
   .section-heading p,
   .section-number {
-    font-size:8px;
+    font-size:10px;
   }
 
   /* About and skills */
@@ -1131,19 +1158,31 @@ footer {
   }
 
   .about-copy {
-    font-size:12px;
+    font-size:15px;
+  }
+
+  .large-copy {
+    font-size:19px;
   }
 
   .about-facts {
     grid-template-columns:1fr;
   }
 
+  .about-facts strong {
+    font-size:14px;
+  }
+
   .skill-list h3 {
-    font-size:15px;
+    font-size:18px;
   }
 
   .skill-list p {
-    font-size:11px;
+    font-size:15px;
+  }
+
+  .tags span {
+    font-size:10px;
   }
 
   /* Projects introduction */
@@ -1153,7 +1192,7 @@ footer {
   }
 
   .projects-intro h1 {
-    font-size:clamp(35px,11vw,54px);
+    font-size:clamp(35px,11vw,48px);
   }
 
   /* Projects layout */
@@ -1196,7 +1235,7 @@ footer {
 
   .projects-list .project-meta .section-number,
   .projects-list .project-type {
-    font-size:8px;
+    font-size:10px;
   }
 
   .projects-list .project-title {
@@ -1206,7 +1245,7 @@ footer {
   }
 
   .projects-list .project-description {
-    font-size:12px;
+    font-size:15px;
     line-height:1.8;
   }
 
@@ -1216,7 +1255,7 @@ footer {
   }
 
   .projects-list .tags span {
-    font-size:8px;
+    font-size:10px;
     padding:5px 8px;
   }
 
@@ -1235,13 +1274,17 @@ footer {
   }
 
   .page-hero h1 {
-    font-size:clamp(40px,11vw,54px);
+    font-size:clamp(40px,11vw,48px);
   }
 
   /* Testimonials */
 
   .testimonial-grid {
     grid-template-columns:1fr;
+  }
+
+  .testimonial-card>p {
+    font-size:15px;
   }
 
   /* Resume */
@@ -1256,6 +1299,15 @@ footer {
     font-size:22px;
   }
 
+  .resume-entry h3 {
+    font-size:18px;
+  }
+
+  .resume-entry p,
+  .resume-entry li {
+    font-size:14px;
+  }
+
   .resume-skill-groups {
     grid-template-columns:1fr;
     gap:18px;
@@ -1268,21 +1320,22 @@ footer {
   }
 
   .contact h2 {
-    font-size:clamp(38px,10vw,54px);
+    font-size:clamp(38px,10vw,48px);
   }
 
   .contact-text {
-    font-size:12px;
+    font-size:15px;
   }
 
   .email-link {
-    font-size:15px;
+    font-size:17px;
   }
 
   footer {
     flex-direction:column;
     gap:8px;
     margin-top:55px;
+    font-size:10px;
   }
 
 }
@@ -1315,11 +1368,11 @@ footer {
   }
 
   .hero-role {
-    font-size:13px;
+    font-size:15px;
   }
 
   .hero-description {
-    font-size:11px;
+    font-size:14px;
   }
 
   .section-heading h2 {
@@ -1426,8 +1479,8 @@ footer {
 
 .education-date {
   display:block;
-  font-family:"DM Mono",monospace;
-  font-size:10px;
+  font-family:var(--font-mono);
+  font-size:11px;
   font-weight:500;
   letter-spacing:.08em;
   color:var(--green-dark);
@@ -1437,7 +1490,7 @@ footer {
 /* Institution */
 
 .education-details h3 {
-  font-size:19px;
+  font-size:20px;
   font-weight:700;
   letter-spacing:-.035em;
   line-height:1.4;
@@ -1448,7 +1501,7 @@ footer {
 /* Qualification */
 
 .education-qualification {
-  font-size:15px;
+  font-size:16px;
   font-weight:600;
   color:var(--text);
   line-height:1.6;
@@ -1465,7 +1518,7 @@ footer {
 }
 
 /* =================================
-   MOBILE RESPONSIVE
+   EDUCATION MOBILE RESPONSIVE
 ================================= */
 
 @media (max-width:800px) {
@@ -1498,15 +1551,15 @@ footer {
   }
 
   .education-date {
-    font-size:9px;
+    font-size:10px;
   }
 
   .education-details h3 {
-    font-size:17px;
+    font-size:18px;
   }
 
   .education-qualification {
-    font-size:14px;
+    font-size:15px;
   }
 
   .education-details > p:not(.education-qualification) {
@@ -1514,6 +1567,10 @@ footer {
   }
 
 }
+
+/* =================================
+   RESUME — WORK EXPERIENCE
+================================= */
 
 /* Remove unwanted underline in Work Experience */
 
