@@ -1,1542 +1,498 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono&family=Manrope:wght@400;500;600;700&display=swap');
-
-/* =================================
-   ROOT & GLOBAL
-================================= */
-
-:root {
-  --bg:#fbfaf6;
-  --paper:#ffffff;
-  --soft:#f3f2eb;
-  --text:#292b25;
-  --muted:#767970;
-  --line:#deded5;
-  --green:#c9dc91;
-  --green-dark:#4e6540;
-  --orange:#e99470;
-  --max:1120px;
-}
-
-* {
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
-
-html {
-  scroll-behavior:smooth;
-}
-
-body {
-  background:var(--bg);
-  color:var(--text);
-  font-family:Manrope,Arial,sans-serif;
-  line-height:1.7;
-}
-
-a {
-  text-decoration:none;
-  color:inherit;
-}
-
-img {
-  max-width:100%;
-}
-
-/* =================================
-   HEADER & NAVIGATION
-================================= */
-
-.site-header {
-  height:76px;
-  max-width:var(--max);
-  margin:auto;
-  padding:0 20px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  border-bottom:1px solid var(--line);
-}
-
-.logo {
-  font-size:16px;
-  font-weight:700;
-  letter-spacing:-.045em;
-}
-
-.logo span {
-  color:var(--orange);
-}
-
-.desktop-nav {
-  display:flex;
-  gap:30px;
-}
-
-.desktop-nav a,
-.header-button {
-  font-size:12px;
-  color:var(--muted);
-  transition:.2s;
-}
-
-.desktop-nav a:hover,
-.desktop-nav a.active {
-  color:var(--text);
-}
-
-.header-button {
-  font-weight:600;
-  color:var(--green-dark);
-}
-
-.header-button span {
-  margin-left:6px;
-}
-
-.menu-button,
-.mobile-nav {
-  display:none;
-}
-
-/* =================================
-   HOMEPAGE HERO
-================================= */
-
-.hero {
-  max-width:var(--max);
-  min-height:calc(100vh - 76px);
-  margin:auto;
-  padding:75px 20px 35px;
-  display:grid;
-  grid-template-columns:1fr .9fr;
-  gap:60px;
-  align-items:center;
-}
-
-.hero-intro {
-  padding-bottom:35px;
-}
-
-.eyebrow {
-  font:10px "DM Mono",monospace;
-  letter-spacing:.09em;
-  color:var(--muted);
-}
-
-.dot {
-  display:inline-block;
-  width:7px;
-  height:7px;
-  background:var(--green-dark);
-  border-radius:50%;
-  margin-right:8px;
-}
-
-.hero h1 {
-  font-size:clamp(48px,6vw,72px);
-  line-height:1.02;
-  letter-spacing:-.075em;
-  font-weight:700;
-  margin:17px 0 8px;
-}
-
-.hero h1 strong {
-  color:var(--green-dark);
-}
-
-.hero-role {
-  color:var(--green-dark);
-  font-size:16px;
-  font-weight:600;
-}
-
-.hero-description {
-  max-width:535px;
-  margin-top:20px;
-  color:var(--muted);
-  font-size:14px;
-  line-height:1.85;
-}
-
-.hero-buttons {
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  margin-top:28px;
-}
-
-.button {
-  display:inline-block;
-  padding:10px 16px;
-  border-radius:8px;
-  font-size:11px;
-  font-weight:600;
-  transition:.25s;
-}
-
-.button:hover {
-  transform:translateY(-2px);
-}
-
-.button-dark {
-  background:var(--text);
-  color:#fff;
-}
-
-.button-dark span {
-  color:var(--green);
-  margin-left:7px;
-}
-
-.button-outline {
-  border:1px solid var(--line);
-  background:var(--paper);
-}
-
-/* Hero image */
-
-.hero-visual {
-  min-height:480px;
-  position:relative;
-  display:grid;
-  place-items:center;
-}
-
-.shape {
-  position:absolute;
-  border-radius:50%;
-}
-
-.shape-back {
-  width:350px;
-  height:350px;
-  background:#e5eacb;
-  top:8%;
-  right:5%;
-}
-
-.shape-front {
-  width:100px;
-  height:100px;
-  background:var(--orange);
-  bottom:10%;
-  left:8%;
-}
-
-.photo-frame {
-  position:relative;
-  width:min(350px,82%);
-  aspect-ratio:4/5;
-  overflow:hidden;
-  border-radius:170px 170px 22px 22px;
-  background:var(--green);
-  transform:rotate(2deg);
-  box-shadow:14px 18px 0 rgba(41,43,37,.07);
-  z-index:2;
-}
-
-.photo-frame img {
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-}
-
-.photo-label {
-  position:absolute;
-  z-index:3;
-  left:18px;
-  right:18px;
-  display:flex;
-  justify-content:space-between;
-  font:8px "DM Mono",monospace;
-  letter-spacing:.06em;
-}
-
-.photo-label.top {
-  top:16px;
-}
-
-.photo-label.bottom {
-  bottom:16px;
-  border-top:1px solid rgba(41,43,37,.25);
-  padding-top:8px;
-}
-
-.placeholder-text {
-  position:absolute;
-  inset:0;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  flex-direction:column;
-  text-align:center;
-  padding:20px;
-}
-
-.placeholder-text b {
-  font-size:14px;
-}
-
-.placeholder-text small {
-  font:9px "DM Mono",monospace;
-  color:var(--muted);
-  margin-top:4px;
-}
-
-.photo-placeholder {
-  border:1px dashed #c8c8bf;
-}
-
-.hello-note {
-  position:absolute;
-  right:-5px;
-  top:16%;
-  z-index:4;
-  background:#fff;
-  border:1px solid var(--line);
-  border-radius:10px;
-  padding:10px 12px;
-  font-size:10px;
-  box-shadow:0 8px 25px rgba(41,43,37,.06);
-  transform:rotate(4deg);
-}
-
-.hello-note b {
-  font-size:16px;
-  margin-left:8px;
-  color:var(--green-dark);
-}
-
-.hero-bottom {
-  grid-column:1/-1;
-  display:flex;
-  align-items:center;
-  gap:14px;
-  font:8px "DM Mono",monospace;
-  color:var(--muted);
-}
-
-.hero-bottom div {
-  height:1px;
-  background:var(--line);
-  flex:1;
-}
-
-/* =================================
-   GENERAL SECTIONS
-================================= */
-
-.section {
-  max-width:var(--max);
-  margin:auto;
-  padding:100px 20px;
-  border-top:1px solid var(--line);
-}
-
-.section-soft {
-  max-width:none;
-  padding-left:max(20px,calc((100vw - var(--max))/2));
-  padding-right:max(20px,calc((100vw - var(--max))/2));
-  background:var(--soft);
-}
-
-.section-heading {
-  display:grid;
-  grid-template-columns:48px 1fr;
-  margin-bottom:40px;
-}
-
-.section-number {
-  font:10px "DM Mono",monospace;
-  color:var(--green-dark);
-}
-
-.section-heading p {
-  font:10px "DM Mono",monospace;
-  color:var(--muted);
-  letter-spacing:.08em;
-  margin-bottom:12px;
-}
-
-.section-heading h2 {
-  font-size:clamp(36px,4.5vw,54px);
-  line-height:1.05;
-  letter-spacing:-.065em;
-  font-weight:600;
-}
-
-.section-heading h2 em {
-  color:var(--green-dark);
-  font-style:normal;
-}
-
-/* =================================
-   ABOUT
-================================= */
-
-.about-layout {
-  display:grid;
-  grid-template-columns:.75fr 1.25fr;
-  gap:65px;
-  align-items:start;
-}
-
-.about-photo-wrap {
-  max-width:330px;
-}
-
-.about-photo {
-  position:relative;
-  aspect-ratio:4/5;
-  background:var(--soft);
-  border-radius:18px;
-  overflow:hidden;
-}
-
-.about-photo img {
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-.photo-caption {
-  display:block;
-  font:9px "DM Mono",monospace;
-  color:var(--muted);
-  margin-top:10px;
-}
-
-.about-copy {
-  max-width:620px;
-  color:var(--muted);
-  font-size:13px;
-}
-
-.large-copy {
-  color:var(--text);
-  font-size:21px;
-  line-height:1.5;  
-  letter-spacing:-.023em;
-  margin-bottom:22px;
-}
-
-.about-copy>p:not(.large-copy) {
-  margin-bottom:16px;
-}
-
-.about-facts {
-  display:grid;
-  grid-template-columns:1fr 1fr 1fr;
-  gap:1px;
-  background:var(--line);
-  margin-top:28px;
-  border:1px solid var(--line);
-}
-
-.about-facts div {
-  background:var(--bg);
-  padding:15px;
-}
-
-.about-facts span {
-  display:block;
-  font:9px "DM Mono",monospace;
-  color:var(--muted);
-  margin-bottom:5px;
-}
-
-.about-facts strong {
-  font-size:12px;
-  font-weight:600;
-}
-
-/* =================================
-   SKILLS
-================================= */
-
-.skills-layout {
-  max-width:var(--max);
-  margin:auto;
-  display:grid;
-  grid-template-columns:.65fr 1.35fr;
-  gap:60px;
-  align-items:start;
-}
-
-.skills-photo {
-  aspect-ratio:1/1;
-  background:#e8e7df;
-  border-radius:18px;
-  position:relative;
-  overflow:hidden;
-}
-
-.skills-photo img {
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-.skill-list article {
-  display:grid;
-  grid-template-columns:40px 1fr;
-  gap:15px;
-  padding:19px 0;
-  border-top:1px solid var(--line);
-}
-
-.skill-list article:last-child {
-  border-bottom:1px solid var(--line);
-}
-
-.skill-index {
-  font:9px "DM Mono",monospace;
-  color:var(--green-dark);
-  padding-top:4px;
-}
-
-.skill-list h3 {
-  font-size:16px;
-  font-weight:600;
-  margin-bottom:3px;
-}
-
-.skill-list p {
-  font-size:12px;
-  color:var(--muted);
-}
-
-.tags {
-  display:flex;
-  gap:6px;
-  flex-wrap:wrap;
-  margin-top:13px;
-}
-
-.tags span {
-  border:1px solid var(--line);
-  border-radius:99px;
-  padding:5px 9px;
-  background:rgba(255,255,255,.45);
-  font:9px "DM Mono",monospace;
-}
-
-/* =================================
-   PROJECTS PAGE INTRODUCTION
-================================= */
-
-.projects-intro {
-  max-width:var(--max);
-  margin:0 auto;
-  padding:75px 20px 40px;
-  border:none !important;
-  box-shadow:none !important;
-}
-
-.projects-intro .eyebrow {
-  margin:0 0 12px;
-}
-
-.projects-intro h1 {
-  font-size:clamp(41px,5.5vw,68px);
-  line-height:1.05;
-  letter-spacing:-.075em;
-  font-weight:700;
-  margin:0;
-}
-
-/* =================================
-   PROJECTS LIST
-================================= */
-
-.projects-list {
-  max-width:var(--max);
-  margin:0 auto;
-  padding:0 20px 90px;
-  border:none !important;
-  box-shadow:none !important;
-}
-
-/* Individual project */
-
-.projects-list .project {
-  display:flex;
-  flex-direction:column;
-  align-items:stretch;
-  gap:24px;
-
-  margin:0;
-  padding:0 0 55px;
-
-  border:none;
-  border-bottom:1px solid var(--line);
-}
-
-/* Spacing between projects */
-
-.projects-list .project + .project {
-  padding-top:55px;
-}
-
-/* Remove divider after final project */
-
-.projects-list .project:last-child {
-  border-bottom:none;
-  padding-bottom:0;
-}
-
-/* Project image */
-
-.projects-list .project-image {
-  position:relative;
-  width:100%;
-  aspect-ratio:16/9;
-  overflow:hidden;
-  border-radius:16px;
-  background:var(--soft);
-}
-
-.projects-list .project-image img {
-  display:block;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-.projects-list .project-badge {
-  position:absolute;
-  top:16px;
-  right:16px;
-  width:32px;
-  height:32px;
-  display:grid;
-  place-items:center;
-  border-radius:50%;
-  background:#fff;
-  font:9px "DM Mono",monospace;
-}
-
-/* Project information */
-
-.projects-list .project-copy {
-  display:flex;
-  flex-direction:column;
-  align-items:flex-start;
-  width:100%;
-  min-width:0;
-}
-
-/* Number and category */
-
-.projects-list .project-meta {
-  display:flex;
-  align-items:center;
-  gap:13px;
-  margin-bottom:12px;
-}
-
-.projects-list .project-meta .section-number {
-  font:10px "DM Mono",monospace;
-  color:var(--green-dark);
-}
-
-.projects-list .project-type {
-  font:10px "DM Mono",monospace;
-  color:var(--muted);
-  letter-spacing:.07em;
-}
-
-/* Project title */
-
-.projects-list .project-title {
-  width:100%;
-  font-size:clamp(32px,3.5vw,44px);
-  line-height:1.12;
-  letter-spacing:-.06em;
-  font-weight:600;
-  margin:0 0 14px;
-}
-
-.projects-list .project-title em {
-  color:var(--green-dark);
-  font-style:normal;
-}
-
-/* Project description */
-
-.projects-list .project-description {
-  display:block;
-  width:100%;
-  max-width:none;
-  color:var(--muted);
-  font-size:13px;
-  line-height:1.85;
-  margin:0;
-}
-
-/* Technology tags */
-
-.projects-list .tags {
-  display:flex;
-  gap:7px;
-  flex-wrap:wrap;
-  margin-top:17px;
-}
-
-.projects-list .tags span {
-  border:1px solid var(--line);
-  border-radius:99px;
-  padding:5px 10px;
-  background:rgba(255,255,255,.45);
-  font:9px "DM Mono",monospace;
-}
-
-/* =================================
-   MULTI-PAGE HERO
-================================= */
-
-.page-hero {
-  max-width:var(--max);
-  margin:auto;
-  padding:90px 20px 75px;
-  border:none !important;
-}
-
-.page-hero h1 {
-  font-size:clamp(46px,5.5vw,68px);
-  line-height:1.05;
-  letter-spacing:-.075em;
-  margin:16px 0 12px;
-}
-
-.page-hero h1 strong {
-  color:var(--green-dark);
-}
-
-/* =================================
-   TESTIMONIALS
-================================= */
-
-.testimonial-grid {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:18px;
-}
-
-.testimonial-card {
-  background:var(--paper);
-  border:1px solid var(--line);
-  border-radius:16px;
-  padding:25px;
-}
-
-.testimonial-mark {
-  font-size:44px;
-  color:var(--green-dark);
-}
-
-.testimonial-card>p {
-  color:var(--muted);
-  font-size:13px;
-  margin:12px 0 22px;
-}
-
-.testimonial-person {
-  display:flex;
-  flex-direction:column;
-}
-
-.testimonial-person strong {
-  font-size:12px;
-}
-
-.testimonial-person span {
-  font:9px "DM Mono",monospace;
-  color:var(--muted);
-}
-
-/* =================================
-   CONTACT LINKS
-================================= */
-
-.contact-links {
-  display:flex;
-  flex-direction:column;
-  gap:5px;
-  align-items:flex-start;
-}
-
-.contact-links .email-link {
-  margin-top:12px;
-}
-
-/* =================================
-   RESUME
-================================= */
-
-.resume-block {
-  display:grid;
-  grid-template-columns:190px 1fr;
-  gap:40px;
-  padding:35px 0;
-  border-top:1px solid var(--line);
-}
-
-.resume-label {
-  display:flex;
-  gap:14px;
-  align-items:flex-start;
-}
-
-.resume-label span {
-  color:var(--green-dark);
-  font:10px "DM Mono",monospace;
-}
-
-.resume-label p {
-  color:var(--muted);
-  font:10px "DM Mono",monospace;
-}
-
-.resume-content {
-  max-width:700px;
-}
-
-.resume-content h2 {
-  font-size:25px;
-  margin-bottom:18px;
-}
-
-.resume-entry {
-  padding:17px 0;
-  border-top:1px solid var(--line);
-}
-
-.resume-entry h3 {
-  font-size:16px;
-}
-
-.resume-entry p,
-.resume-entry li {
-  font-size:12px;
-  color:var(--muted);
-  line-height:1.85;
-}
-
-.resume-entry ul {
-  padding-left:18px;
-}
-
-.resume-entry-subtitle {
-  font-weight:600;
-  margin:5px 0;
-}
-
-.resume-skill-groups {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:22px;
-}
-
-.resume-skill-groups h3 {
-  font-size:13px;
-}
-
-.text-link {
-  display:inline-block;
-  margin-top:10px;
-  color:var(--green-dark);
-  font-size:12px;
-  font-weight:700;
-}
-
-/* =================================
-   CONTACT SECTION
-================================= */
-
-.contact {
-  background:var(--text);
-  color:#fff;
-  padding:90px max(20px,calc((100vw - var(--max))/2));
-}
-
-.contact-inner {
-  max-width:var(--max);
-  margin:auto;
-}
-
-.contact-label {
-  font:10px "DM Mono",monospace;
-  color:#aeb0a8;
-}
-
-.contact h2 {
-  font-size:clamp(46px,5.5vw,70px);
-  line-height:1;
-  letter-spacing:-.04em;
-  margin:17px 0 20px;
-}
-
-.contact h2 em {
-  color:var(--green);
-  font-style:normal;
-}
-
-.contact-text {
-  max-width:500px;
-  color:#b5b7af;
-  font-size:13px;
-}
-
-.email-link {
-  display:inline-block;
-  color:var(--green);
-  border-bottom:1px solid #62655c;
-  padding-bottom:7px;
-  margin-top:23px;
-  font-size:17px;
-}
-
-.email-link span {
-  margin-left:8px;
-}
-
-/* =================================
-   FOOTER
-================================= */
-
-footer {
-  display:flex;
-  justify-content:space-between;
-  gap:20px;
-  flex-wrap:wrap;
-  border-top:1px solid #484b43;
-  margin-top:75px;
-  padding-top:17px;
-  color:#999c94;
-  font:9px "DM Mono",monospace;
-}
-
-/* =================================
-   REVEAL ANIMATION
-================================= */
-
-.about-layout,
-.skills-layout,
-.project,
-.testimonial-card,
-.resume-block {
-  opacity:0;
-  transform:translateY(18px);
-  transition:opacity .65s ease,transform .65s ease;
-}
-
-.about-layout.show,
-.skills-layout.show,
-.project.show,
-.testimonial-card.show,
-.resume-block.show {
-  opacity:1;
-  transform:none;
-}
-
-/* =================================
-   MOBILE RESPONSIVE
-================================= */
-
-@media(max-width:800px) {
-
-  .site-header {
-    padding:0 18px;
-  }
-
-  .desktop-nav,
-  .header-button {
-    display:none;
-  }
-
-  .menu-button {
-    display:block;
-    width:36px;
-    height:36px;
-    border:1px solid var(--line);
-    border-radius:50%;
-    background:none;
-    padding:9px;
-  }
-
-  .menu-button i {
-    display:block;
-    height:1px;
-    background:var(--text);
-    margin:5px 0;
-  }
-
-  .mobile-nav {
-    position:fixed;
-    z-index:20;
-    top:76px;
-    left:18px;
-    right:18px;
-    background:var(--paper);
-    border:1px solid var(--line);
-    padding:16px;
-    flex-direction:column;
-    gap:14px;
-    display:none;
-    box-shadow:0 15px 30px rgba(41,43,37,.08);
-  }
-
-  .mobile-nav.open {
-    display:flex;
-  }
-
-  .mobile-nav a {
-    font-size:12px;
-  }
-
-  /* Mobile homepage */
-
-  .hero {
-    min-height:auto;
-    display:flex;
-    flex-direction:column;
-    padding:38px 18px 55px;
-    gap:30px;
-  }
-
-  .hero-visual {
-    order:1;
-    width:100%;
-    min-height:315px;
-  }
-
-  .hero-intro {
-    order:2;
-    padding-bottom:5px;
-  }
-
-  .hero-bottom {
-    order:3;
-    width:100%;
-  }
-
-  .photo-frame {
-    width:min(245px,68vw);
-  }
-
-  .shape-back {
-    width:245px;
-    height:245px;
-    right:8%;
-    top:5%;
-  }
-
-  .shape-front {
-    width:70px;
-    height:70px;
-    left:8%;
-    bottom:7%;
-  }
-
-  .hello-note {
-    font-size:9px;
-    right:0;
-    top:13%;
-  }
-
-  .eyebrow {
-    font-size:8px;
-  }
-
-  .hero h1 {
-    font-size:clamp(38px,11vw,52px);
-    line-height:1.04;
-    margin:13px 0 7px;
-  }
-
-  .hero-role {
-    font-size:14px;
-  }
-
-  .hero-description {
-    font-size:12px;
-    line-height:1.75;
-    margin-top:14px;
-    max-width:100%;
-  }
-
-  .hero-buttons {
-    margin-top:21px;
-  }
-
-  .button {
-    font-size:10px;
-    padding:9px 13px;
-  }
-
-  /* General sections */
-
-  .section {
-    padding:50px 28px;
-
-  }
-
-  .section-soft {
-    padding-left:18px;
-    padding-right:18px;
-  }
-
-  .section-heading {
-    grid-template-columns:32px 1fr;
-    margin-bottom:20px;
-    border: 1px solid grey;
-  }
-
-  .section-heading h2 {
-    font-size:clamp(30px,8vw,42px);
-    line-height:1.06;
-  }
-
-  .section-heading p,
-  .section-number {
-    font-size:8px;
-  }
-
-  /* About and skills */
-
-  .about-layout,
-  .skills-layout {
-    grid-template-columns:1fr;
-    gap:30px;
-  }
-
-  .about-photo-wrap {
-    max-width:none;
-    display:flex;
-    justify-content:center;
-  }
-
-  .skills-photo {
-    max-width:100%;
-  }
-
-  .about-photo {
-    max-width:330px;
-  }
-
-  .about-copy {
-    font-size:12px;
-  }
-
-
-    
-
-  .about-facts {
-    grid-template-columns:1fr;
-  }
-
-  .skill-list h3 {
-    font-size:15px;
-  }
-
-  .skill-list p {
-    font-size:11px;
-  }
-
-  /* Projects introduction */
-
-  .projects-intro {
-    padding:65px 18px 35px;
-  }
-
-  .projects-intro h1 {
-    font-size:clamp(35px,11vw,54px);
-  }
-
-  /* Projects layout */
-
-  .projects-list {
-    padding:0 18px 65px;
-  }
-
-  .projects-list .project {
-    display:flex;
-    flex-direction:column;
-    gap:20px;
-    padding:0 0 40px;
-  }
-
-  .projects-list .project + .project {
-    padding-top:40px;
-  }
-
-  .projects-list .project:last-child {
-    padding-bottom:0;
-  }
-
-  .projects-list .project-image {
-    order:1;
-    width:100%;
-    aspect-ratio:16/9;
-    border-radius:13px;
-  }
-
-  .projects-list .project-copy {
-    order:2;
-    width:100%;
-  }
-
-  .projects-list .project-meta {
-    gap:11px;
-    margin-bottom:10px;
-  }
-
-  .projects-list .project-meta .section-number,
-  .projects-list .project-type {
-    font-size:8px;
-  }
-
-  .projects-list .project-title {
-    font-size:clamp(30px,8vw,38px);
-    line-height:1.1;
-    margin-bottom:13px;
-  }
-
-  .projects-list .project-description {
-    font-size:12px;
-    line-height:1.8;
-  }
-
-  .projects-list .tags {
-    margin-top:15px;
-    gap:6px;
-  }
-
-  .projects-list .tags span {
-    font-size:8px;
-    padding:5px 8px;
-  }
-
-  .projects-list .project-badge {
-    top:12px;
-    right:12px;
-    width:29px;
-    height:29px;
-  }
-
-  /* General page hero */
-
-  .page-hero {
-    padding:65px 18px 55px;
-    border:none !important;
-  }
-
-  .page-hero h1 {
-    font-size:clamp(40px,11vw,54px);
-  }
-
-  /* Testimonials */
-
-  .testimonial-grid {
-    grid-template-columns:1fr;
-  }
-
-  /* Resume */
-
-  .resume-block {
-    grid-template-columns:1fr;
-    gap:17px;
-    padding:27px 0;
-  }
-
-  .resume-content h2 {
-    font-size:22px;
-  }
-
-  .resume-skill-groups {
-    grid-template-columns:1fr;
-    gap:18px;
-  }
-
-  /* Contact */
-
-  .contact {
-    padding:75px 18px;
-  }
-
-  .contact h2 {
-    font-size:clamp(38px,10vw,54px);
-  }
-
-  .contact-text {
-    font-size:12px;
-  }
-
-  .email-link {
-    font-size:15px;
-  }
-
-  footer {
-    flex-direction:column;
-    gap:8px;
-    margin-top:55px;
-  }
-}
-
-/* =================================
-   SMALL MOBILE DEVICES
-================================= */
-
-@media(max-width:380px) {
-
-  .hero {
-    padding-top:30px;
-  }
-
-  .hero-visual {
-    min-height:280px;
-  }
-
-  .photo-frame {
-    width:215px;
-  }
-
-  .shape-back {
-    width:215px;
-    height:215px;
-  }
-
-  .hero h1 {
-    font-size:36px;
-  }
-
-  .hero-role {
-    font-size:13px;
-  }
-
-  .hero-description {
-    font-size:11px;
-  }
-
-  .section-heading h2 {
-    font-size:30px;
-  }
-
-  .projects-intro h1 {
-    font-size:35px;
-  }
-
-  .projects-list .project-title {
-    font-size:32px;
-  }
-}
-
-/* =================================
-   FULL-WIDTH CONTACT & FOOTER
-================================= */
-
-.contact {
-  width: 100%;
-  max-width: none;
-  margin-left: 0;
-  margin-right: 0;
-  padding: 90px 20px;
-  background: var(--text);
-}
-
-.contact-inner {
-  width: 100%;
-  max-width: var(--max);
-  margin: 0 auto;
-}
-
-/* Keep footer aligned with contact content */
-.contact footer {
-  width: 100%;
-}
-
-/* Mobile */
-@media (max-width: 800px) {
-  .contact {
-    padding: 75px 18px;
-  }
-}
-
-/* =================================
-   EDUCATION — VERTICAL TIMELINE
-================================= */
-
-.education-timeline {
-  position: relative;
-  margin-top: 35px;
-  padding-left: 32px;
-}
-
-/* Vertical connecting line */
-.education-timeline::before {
-  content: "";
-  position: absolute;
-  left: 7px;
-  top: 8px;
-  bottom: -10px;
-  width: 1px;
-  background: var(--line);
-}
-
-/* Each education entry */
-.education-item {
-  position: relative;
-  padding-bottom: 42px;
-}
-
-/* Remove spacing from last entry */
-.education-item:last-child {
-  padding-bottom: 0;
-}
-
-/* Timeline marker */
-.education-item::before {
-  content: "";
-  position: absolute;
-  left: -34px;
-  top: 35px;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: var(--green-dark);
-  border: 3px solid var(--bg);
-  box-sizing: content-box;
-  z-index: 1;
-}
-
-/* Date label */
-.education-date {
-  display: block;
-  font-family: "DM Mono", monospace;
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: .08em;
-  color: var(--green-dark);
-  margin-bottom: 11px;
-}
-
-/* Institution */
-.education-details h3 {
-  font-size: 19px;
-  font-weight: 700;
-  letter-spacing: -.035em;
-  line-height: 1.4;
-  color: var(--text);
-  margin-bottom: 5px;
-}
-
-/* Qualification */
-.education-qualification {
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--text);
-  line-height: 1.6;
-  margin-bottom: 8px;
-}
-
-/* Description */
-.education-details > p:not(.education-qualification) {
-  font-size: 15px;
-  line-height: 1.8;
-  color: var(--muted);
-  max-width: 600px;
-}
-
-/* =================================
-   MOBILE RESPONSIVE
-================================= */
-
-@media (max-width: 800px) {
-
-  .education-timeline {
-    margin-top: 30px;
-    padding-left: 28px;
-  }
-
-  .education-timeline::before {
-    left: 6px;
-    top: 8px;
-    bottom: -10px;
-  }
-
-  .education-item {
-    padding-bottom: 32px;
-  }
-
-  .education-item:last-child {
-    padding-bottom: 0;
-  }
-
-  .education-item::before {
-    left: -30px;
-    top: 30px;
-    width: 12px;
-    height: 12px;
-    border: 3px solid var(--bg);
-  }
-
-  .education-date {
-    font-size: 9px;
-  }
-
-  .education-details h3 {
-    font-size: 17px;
-  }
-
-  .education-qualification {
-    font-size: 14px;
-  }
-
-  .education-details > p:not(.education-qualification) {
-    font-size: 14px;
-  }
-}
-
-
-/* Remove unwanted underline in Work Experience */
-.resume-block .resume-entry {
-  border-top: none;
-  padding-top: 0;
-}
-/* Resume page hero spacing */
-.page-hero {
-  padding-bottom: 45px;
-}
-
-.page-hero .hero-description {
-  margin-bottom: 0;
-}
-
-/* RESUME PAGE — HERO SPACING */
-
-.resume-hero {
-  padding-bottom: 20px;
-  margin-bottom: 0;
-}
-
-.resume-hero .hero-description {
-  margin-bottom: 0;
-}
-
-.resume-intro {
-  padding-top: 20px;
-}
-
-/* MOBILE */
-@media (max-width: 800px) {
-  .resume-hero {
-    padding-bottom: 15px;
-  }
-
-  .resume-intro {
-    padding-top: 15px;
-  }
-}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lau Jia Yuan — IT Graduate Portfolio">
+
+  <title>Lau Jia Yuan — Home</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header class="site-header">
+
+  <a class="logo" href="index.html">
+    Lau Jia Yuan<span>.</span>
+  </a>
+
+  <nav class="desktop-nav" aria-label="Main navigation">
+    <a class="active" href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="resume.html">Resume</a>
+  </nav>
+
+  <a class="header-button" href="#contact">
+    Contact Me <span>↗</span>
+  </a>
+
+  <button class="menu-button" aria-label="Open navigation">
+    <i></i>
+    <i></i>
+  </button>
+
+</header>
+
+<!-- MOBILE NAVIGATION -->
+
+<div class="mobile-nav">
+
+  <a class="active" href="index.html">Home</a>
+  <a href="projects.html">Projects</a>
+  <a href="resume.html">Resume</a>
+  <a href="#contact">Contact</a>
+
+</div>
+
+
+<main>
+
+  <!-- HOME INTRODUCTION -->
+
+  <section id="home" class="hero">
+
+    <div class="hero-intro">
+
+      <div class="eyebrow">
+        <span class="dot"></span>
+        INFORMATION TECHNOLOGY · NANYANG POLYTECHNIC
+      </div>
+
+      <h1>
+        Hello, I'm<br>
+        <strong>Lau Jia Yuan.</strong>
+      </h1>
+
+      <p class="hero-role">
+        Fresh IT Graduate &amp; Aspiring Developer
+      </p>
+
+      <p class="hero-description">
+        I enjoy creating websites, applications, and solutions
+        that are simple, easy to use, and designed with a clear purpose.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a class="button button-dark" href="projects.html">
+          Explore my work <span>↗</span>
+        </a>
+
+        <a class="button button-outline" href="#about">
+          About me
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="hero-visual">
+
+      <div class="shape shape-back"></div>
+      <div class="shape shape-front"></div>
+
+      <div class="photo-frame">
+
+        <div class="photo-label top">
+          <span>PROFILE</span>
+          <span>01</span>
+        </div>
+
+        <img src="images/Profile_Pic.jpg" alt="Lau Jia Yuan">
+
+        <div class="photo-label bottom">
+          <span>LAU JIA YUAN</span>
+          <span>2026</span>
+        </div>
+
+      </div>
+
+      <div class="hello-note">
+        <span>Nice to meet you, Ni hao!</span>
+        <b>☺</b>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT ME -->
+
+  <section id="about" class="section">
+
+    <div class="section-heading">
+
+      <h2>
+        About Me<br>
+        <em>A little bit about me.</em>
+      </h2>
+
+    </div>
+
+
+    <div class="about-layout">
+
+      <div class="about-photo-wrap">
+
+        <div class="about-photo">
+          <img src="images/nyp.png" alt="Nanyang Polytechnic">
+        </div>
+
+      </div>
+
+
+      <div class="about-copy">
+
+        <p class="large-copy">
+          I’m a responsible and motivated IT graduate who enjoys
+          learning, developing new skills, and taking on new experiences.
+        </p>
+
+        <p>
+          I adapt well to changes and believe that good interpersonal
+          skills and teamwork are important. I am also well-organized
+          when it comes to planning and managing my time.
+
+          Taking the initiative to identify and solve problems without
+          being asked is one of my strengths.
+
+          I have a strong interest in programming and technology,
+          with a focus on <strong>Node.js</strong>,
+          <strong>Jinja</strong>, <strong>HTML</strong>,
+          <strong>CSS</strong> and <strong>JavaScript</strong>.
+        </p>
+
+        <p>
+          I also place great importance on <strong>UX design</strong>,
+          with a focus on creating websites that are user-friendly,
+          visually appealing, and easy to navigate.
+
+          In addition, I have explored basic
+          <strong>networking</strong>, giving me a solid foundation
+          in understanding how devices and networks communicate.
+        </p>
+
+
+        <div class="about-facts">
+
+          <div>
+            <span>EDUCATION</span>
+            <strong>Information Technology</strong>
+          </div>
+
+          <div>
+            <span>SCHOOL</span>
+            <strong>Nanyang Polytechnic</strong>
+          </div>
+
+          <div>
+            <span>INTERESTED IN</span>
+            <strong>Web &amp; Application Development</strong>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SKILLS -->
+
+  <section id="skills" class="section section-soft">
+
+    <div class="section-heading">
+
+      <h2>
+        Skills I've picked up<br>
+        <em>along the way.</em>
+      </h2>
+
+    </div>
+
+
+    <div class="skills-layout">
+
+      <!--
+      <div class="skills-photo">
+        <img src="images/skills.jpg"
+             alt="Lau Jia Yuan working on a project">
+      </div>
+      -->
+
+      <div class="skill-list">
+
+
+        <article>
+
+          <div>
+
+            <h3>Frontend Development</h3>
+
+            <p>
+              Designing simple and friendly websites
+              that are easy to use and understand.
+            </p>
+
+            <div class="tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>React</span>
+              <span>Bootstrap</span>
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <article>
+
+          <div>
+
+            <h3>Backend Development</h3>
+
+            <p>
+              Building simple and reliable applications,
+              APIs and AI solutions.
+            </p>
+
+            <div class="tags">
+              <span>C#</span>
+              <span>ASP.NET</span>
+              <span>Python</span>
+              <span>Node.js</span>
+              <span>Jinja</span>
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <article>
+
+          <div>
+
+            <h3>Database</h3>
+
+            <p>
+              Working with data and connecting applications
+              to databases.
+            </p>
+
+            <div class="tags">
+              <span>MySQL</span>
+              <span>SQLite</span>
+              <span>Entity Framework</span>
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <article>
+
+          <div>
+
+            <h3>Development Tools</h3>
+
+            <p>
+              Tools I use to design, build and manage my projects.
+            </p>
+
+            <div class="tags">
+              <span>Git</span>
+              <span>GitHub</span>
+              <span>VS Code</span>
+              <span>Figma</span>
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <article>
+
+          <div>
+
+            <h3>AI &amp; Machine Learning</h3>
+
+            <p>
+              Exploring AI tools to build simple and practical solutions.
+            </p>
+
+            <div class="tags">
+              <span>Roboflow</span>
+              <span>Anaconda</span>
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- TESTIMONIALS -->
+
+  <section id="testimonials" class="section">
+
+    <div class="section-heading">
+
+      <h2>
+        Kind words<br>
+        <em>from people I've worked with.</em>
+      </h2>
+
+    </div>
+
+
+    <div class="testimonial-grid">
+
+
+      <article class="testimonial-card">
+
+        <span class="testimonial-mark">“</span>
+
+        <p>
+          Jia Yuan's positivity, strong dedication and commitment to every single task assigned to him is an inspiration to the rest of the club members, especially the juniors. A highly-motivated student, Jia Yuan has the ability to analyse and make sound decisions on the nature of the assignment entrusted to him. He is not one to simply take instructions, but will use his better judgment to objectively solve the issues at hand.
+        </p>
+
+        <div class="testimonial-person">
+          <strong>Eleaner Ang</strong>
+          <span>ITE CCA Incharge</span>
+        </div>
+
+      </article>
+
+
+      <article class="testimonial-card">
+
+        <span class="testimonial-mark">“</span>
+
+        <p>
+          Jia Yuan is a good listener, well-liked by his peers and takes pride in the work assigned to him. He puts his observational skills to excellent use and has gained unanimous approval from teachers and peers alike as someone who can be trusted.
+        </p>
+
+        <div class="testimonial-person">
+          <strong>Riley Peng</strong>
+          <span>Intern Colleague</span>
+        </div>
+
+      </article>
+
+
+      <article class="testimonial-card">
+
+        <span class="testimonial-mark">“</span>
+
+        <p>
+          Jia Yuan is a highly motivated and well-mannered student. He is conscientious in class and takes pride in the tasks assigned. He is keen to excel academically and displays perseverance in his pursuit of academic excellence, As a determined learner, Jia Yuan strives hard to overcome the difficulties in his learning process. Although he is one of the top performers in class, he is always humble and seeks opportunities to improve himself.
+        </p>
+
+        <div class="testimonial-person">
+          <strong>Thomas Low</strong>
+          <span>Secondary School Teacher</span>
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+
+  <section id="contact" class="contact">
+
+    <div class="contact-inner">
+
+      <p class="contact-label">04 / CONTACT ME</p>
+
+      <h2>
+        Thanks for<br>
+        your<em> time.</em>
+      </h2>
+
+      <p class="contact-text">
+        If you would like to know more about me,
+        my projects or what I'm learning,
+        feel free to reach out.
+      </p>
+
+
+      <div class="contact-links">
+
+        <a class="email-link"
+           href="mailto:jiayuanlau2222@email.com">
+
+          <i class="fa-solid fa-envelope"></i>
+          &nbsp;jiayuanlau2222@email.com <span>↗</span>
+
+        </a>
+
+
+        <a class="email-link"
+           href="https://www.linkedin.com/in/YOUR-USERNAME/"
+           target="_blank"
+           rel="noopener noreferrer">
+
+          <i class="fa-brands fa-linkedin"></i>
+          &nbsp;LinkedIn <span>↗</span>
+
+        </a>
+
+
+        <a class="email-link"
+           href="https://www.instagram.com/YOUR-USERNAME/"
+           target="_blank"
+           rel="noopener noreferrer">
+
+          <i class="fa-brands fa-instagram"></i>
+          &nbsp;Instagram <span>↗</span>
+
+        </a>
+
+      </div>
+
+
+      <footer>
+
+        <span>Lau Jia Yuan</span>
+        <span>Designed &amp; built by Lau Jia Yuan</span>
+        <span>© 2026</span>
+
+      </footer>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
