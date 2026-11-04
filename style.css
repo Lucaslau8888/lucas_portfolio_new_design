@@ -3,6 +3,12 @@
 /* =================================
    ROOT & GLOBAL
 ================================= */
+.projects-intro {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 90px 20px 65px;
+    border: none;
+}
 
 :root {
   --bg:#fbfaf6;
