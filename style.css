@@ -525,8 +525,8 @@ a {
 
 .projects-intro {
   max-width:var(--max);
-  margin:0 auto;
-  padding:10px;
+  margin:0px;
+  padding:0px;
   border:none !important;
   box-shadow:none !important;
 }
