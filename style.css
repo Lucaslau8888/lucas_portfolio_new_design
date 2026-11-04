@@ -1362,3 +1362,128 @@ footer {
     padding: 75px 18px;
   }
 }
+
+/* =================================
+   EDUCATION — VERTICAL TIMELINE
+================================= */
+
+.education-timeline {
+  position: relative;
+  margin-top: 35px;
+  padding-left: 32px;
+}
+
+/* Vertical connecting line */
+.education-timeline::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  bottom: 12px;
+  width: 1px;
+  background: var(--line);
+}
+
+/* Each education entry */
+.education-item {
+  position: relative;
+  padding-bottom: 42px;
+}
+
+/* Remove extra spacing from last entry */
+.education-item:last-child {
+  padding-bottom: 0;
+}
+
+/* Timeline marker */
+.education-item::before {
+  content: "";
+  position: absolute;
+  left: -32px;
+  top: 3px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--green-dark);
+  border: 3px solid var(--bg);
+  box-sizing: content-box;
+  z-index: 1;
+}
+
+/* Date label */
+.education-date {
+  display: block;
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .08em;
+  color: var(--green-dark);
+  margin-bottom: 11px;
+}
+
+/* Institution */
+.education-details h3 {
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -.035em;
+  line-height: 1.4;
+  color: var(--text);
+  margin-bottom: 5px;
+}
+
+/* Qualification */
+.education-qualification {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+/* Description */
+.education-details > p:not(.education-qualification) {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--muted);
+  max-width: 600px;
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+
+  .education-timeline {
+    margin-top: 25px;
+    padding-left: 28px;
+  }
+
+  .education-timeline::before {
+    left: 4px;
+  }
+
+  .education-item {
+    padding-bottom: 32px;
+  }
+
+  .education-item::before {
+    left: -28px;
+    width: 8px;
+    height: 8px;
+  }
+
+  .education-details h3 {
+    font-size: 17px;
+  }
+
+  .education-qualification {
+    font-size: 14px;
+  }
+
+  .education-details > p:not(.education-qualification) {
+    font-size: 14px;
+  }
+
+  .education-date {
+    font-size: 9px;
+  }
+}
+
