@@ -775,19 +775,9 @@ img {
 ================================= */
 
 .skills-layout {
-
   max-width:var(--max);
-
   margin:auto;
-
-  display:grid;
-
-  grid-template-columns:.65fr 1.35fr;
-
-  gap:60px;
-
-  align-items:start;
-
+  display:block;
 }
 
 .skills-photo {
@@ -815,18 +805,11 @@ img {
 }
 
 .skill-list article {
-
-  display:grid;
-
-  grid-template-columns:40px 1fr;
-
-  gap:15px;
-
-  padding:19px 0;
-
+  display:block;
+  padding:21px 0;
   border-top:1px solid var(--line);
-
 }
+
 
 .skill-list article:last-child {
 
