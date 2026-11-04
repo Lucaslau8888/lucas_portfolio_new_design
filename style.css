@@ -614,7 +614,7 @@ a {
   max-width: var(--max);
   margin: auto;
   padding: 90px 20px 65px;
-  border: none;
+  border-bottom: 1px solid var(--line);
 }
 
 .page-hero h1 {
