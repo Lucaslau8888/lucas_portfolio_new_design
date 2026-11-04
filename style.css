@@ -1333,3 +1333,11 @@ footer {
     font-size:32px;
   }
 }
+
+/* Smaller project images on laptop / desktop */
+@media (min-width: 769px) {
+  .projects-list .project-image {
+    width: 85%;
+    margin: 0 auto;
+  }
+}
