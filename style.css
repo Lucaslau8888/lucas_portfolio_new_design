@@ -1400,7 +1400,7 @@ footer {
   content: "";
   position: absolute;
   left: -34px;
-  top: 20px;
+  top: 30px;
   width: 14px;
   height: 14px;
   border-radius: 50%;
@@ -1475,7 +1475,7 @@ footer {
 
   .education-item::before {
     left: -30px;
-    top: 15px;
+    top: 25px;
     width: 12px;
     height: 12px;
     border: 3px solid var(--bg);
