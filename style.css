@@ -1304,3 +1304,27 @@ footer {
     font-size:33px;
   }
 }
+
+/* Project image above description */
+
+.projects-list .project,
+.projects-list .project-reverse {
+  display:flex;
+  flex-direction:column;
+  align-items:stretch;
+  gap:30px;
+}
+
+.projects-list .project-image {
+  width:100%;
+  aspect-ratio:16 / 9;
+}
+
+.projects-list .project-copy {
+  width:100%;
+}
+
+.projects-list .project-reverse .project-image,
+.projects-list .project-reverse .project-copy {
+  order:initial;
+}
