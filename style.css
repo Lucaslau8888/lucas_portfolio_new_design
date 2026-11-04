@@ -345,7 +345,7 @@ img {
 .section-heading {
   display:grid;
   grid-template-columns:48px 1fr;
-  margin-bottom:20px;
+  margin-bottom:40px;
 }
 
 .section-number {
