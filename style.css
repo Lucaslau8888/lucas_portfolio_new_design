@@ -1369,8 +1369,8 @@ footer {
 
 .education-timeline {
   position: relative;
-  margin-top: 30px;
-  padding-left: 25px;
+  margin-top: 0px;
+  padding-left: 24px;
 }
 
 /* Vertical connecting line */
@@ -1452,7 +1452,7 @@ footer {
 @media (max-width: 800px) {
 
   .education-timeline {
-    margin-top: 50px;
+    margin-top: 0px;
     padding-left: 24px;
   }
 
