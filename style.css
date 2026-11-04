@@ -1513,4 +1513,28 @@ footer {
   margin-bottom: 0;
 }
 
+/* RESUME PAGE — HERO SPACING */
 
+.resume-hero {
+  padding-bottom: 20px;
+  margin-bottom: 0;
+}
+
+.resume-hero .hero-description {
+  margin-bottom: 0;
+}
+
+.resume-intro {
+  padding-top: 20px;
+}
+
+/* MOBILE */
+@media (max-width: 800px) {
+  .resume-hero {
+    padding-bottom: 15px;
+  }
+
+  .resume-intro {
+    padding-top: 15px;
+  }
+}
