@@ -1,5 +1,221 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono&family=Manrope:wght@400;500;600;700&display=swap');
 
+
+/* =================================
+   MULTI-PAGE PORTFOLIO ADDITIONS
+================================= */
+
+/* Page hero */
+
+.page-hero {
+  max-width: var(--max);
+  margin: auto;
+  padding: 105px 20px 95px;
+  border-bottom: 1px solid var(--line);
+}
+
+.page-hero h1 {
+  font-size: clamp(48px, 6vw, 76px);
+  line-height: 1.02;
+  letter-spacing: -.075em;
+  margin: 20px 0 12px;
+}
+
+.page-hero h1 strong {
+  color: var(--green-dark);
+}
+
+/* Testimonials */
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.testimonial-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 28px;
+}
+
+.testimonial-mark {
+  font-size: 48px;
+  color: var(--green-dark);
+}
+
+.testimonial-card > p {
+  color: var(--muted);
+  font-size: 13px;
+  margin: 12px 0 25px;
+}
+
+.testimonial-person {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-person strong {
+  font-size: 11px;
+}
+
+.testimonial-person span {
+  font: 9px "DM Mono", monospace;
+  color: var(--muted);
+}
+
+/* Contact links */
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-start;
+}
+
+.contact-links .email-link {
+  margin-top: 12px;
+}
+
+/* Projects page */
+
+.project-heading {
+  margin-top: 70px;
+}
+
+.project {
+  margin-bottom: 90px;
+}
+
+/* Resume page */
+
+.resume-block {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 45px;
+  padding: 38px 0;
+  border-top: 1px solid var(--line);
+}
+
+.resume-label {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.resume-label span {
+  color: var(--green-dark);
+  font: 9px "DM Mono", monospace;
+}
+
+.resume-label p {
+  color: var(--muted);
+  font: 9px "DM Mono", monospace;
+}
+
+.resume-content {
+  max-width: 700px;
+}
+
+.resume-content h2 {
+  font-size: 27px;
+  margin-bottom: 20px;
+}
+
+.resume-entry {
+  padding: 18px 0;
+  border-top: 1px solid var(--line);
+}
+
+.resume-entry h3 {
+  font-size: 16px;
+}
+
+.resume-entry p,
+.resume-entry li {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.85;
+}
+
+.resume-entry ul {
+  padding-left: 18px;
+}
+
+.resume-entry-subtitle {
+  font-weight: 600;
+  margin: 5px 0;
+}
+
+.resume-skill-groups {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.resume-skill-groups h3 {
+  font-size: 13px;
+}
+
+.text-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--green-dark);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* Reveal animation */
+
+.testimonial-card,
+.resume-block {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .65s ease, transform .65s ease;
+}
+
+.testimonial-card.show,
+.resume-block.show {
+  opacity: 1;
+  transform: none;
+}
+
+/* Mobile */
+
+@media(max-width:800px) {
+
+  .page-hero {
+    padding: 75px 18px 65px;
+  }
+
+  .page-hero h1 {
+    font-size: clamp(40px, 11vw, 55px);
+  }
+
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-block {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 28px 0;
+  }
+
+  .resume-content h2 {
+    font-size: 23px;
+  }
+
+  .resume-skill-groups {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+}
+
+                    
+          
 :root{
   --bg:#fbfaf6;
   --paper:#ffffff;
