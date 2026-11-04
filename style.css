@@ -1331,3 +1331,34 @@ footer {
     font-size:32px;
   }
 }
+
+/* =================================
+   FULL-WIDTH CONTACT & FOOTER
+================================= */
+
+.contact {
+  width: 100%;
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 90px 20px;
+  background: var(--text);
+}
+
+.contact-inner {
+  width: 100%;
+  max-width: var(--max);
+  margin: 0 auto;
+}
+
+/* Keep footer aligned with contact content */
+.contact footer {
+  width: 100%;
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+  .contact {
+    padding: 75px 18px;
+  }
+}
