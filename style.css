@@ -307,7 +307,7 @@ img {
 
 .hello-note {
   position:absolute;
-  right:-5px;
+  right:-20px;
   top:16%;
   z-index:4;
   background:#fff;
@@ -315,7 +315,7 @@ img {
   border-radius:10px;
   padding:10px 12px;
   font-size:13px;
-  font-weight:600;
+  font-weight:500;
   box-shadow:0 8px 25px rgba(41,43,37,.06);
   transform:rotate(4deg);
 }
@@ -392,20 +392,21 @@ img {
 /* =================================
    ABOUT
 ================================= */
-
 .about-layout {
   display:grid;
-  grid-template-columns:.75fr 1.25fr;
+  grid-template-columns:.65fr 1.35fr;
   gap:65px;
   align-items:start;
 }
 
 .about-photo-wrap {
   max-width:330px;
+
 }
 
 .about-photo {
   position:relative;
+  width:100%;
   aspect-ratio:4/5;
   background:var(--soft);
   border-radius:18px;
@@ -416,6 +417,9 @@ img {
   width:100%;
   height:100%;
   object-fit:cover;
+    object-position:center;
+  display:block;
+
 }
 
 .photo-caption {
@@ -426,7 +430,7 @@ img {
 }
 
 .about-copy {
-  max-width:620px;
+  max-width:none;
   color:var(--muted);
   font-size:16px;
   font-weight:500;
@@ -468,8 +472,8 @@ img {
 }
 
 .about-facts strong {
-  font-size:14px;
-  font-weight:700;
+  font-size:12px;
+  font-weight:650;
   color:var(--text);
 }
 
@@ -743,6 +747,8 @@ img {
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:18px;
+    align-items:stretch;
+
 }
 
 .testimonial-card {
@@ -750,6 +756,10 @@ img {
   border:1px solid var(--line);
   border-radius:16px;
   padding:25px;
+
+  display:flex;
+  flex-direction:column;
+  height:100%;
 }
 
 .testimonial-mark {
@@ -768,6 +778,9 @@ img {
 .testimonial-person {
   display:flex;
   flex-direction:column;
+  margin-top:auto;
+
+
 }
 
 .testimonial-person strong {
@@ -909,6 +922,7 @@ img {
   letter-spacing:-.04em;
   font-weight:700;
   margin:17px 0 20px;
+  color:white;
 }
 
 .contact h2 em {
@@ -1164,7 +1178,7 @@ footer {
   .about-photo-wrap {
     max-width:none;
     display:flex;
-    justify-content:center;
+  justify-self:center;
   }
 
   .skills-photo {
@@ -1519,8 +1533,8 @@ footer {
 /* Qualification */
 
 .education-qualification {
-  font-size:16px;
-  font-weight:700;
+  font-size:14px;
+  font-weight:500;
   color:var(--text);
   line-height:1.6;
   margin-bottom:8px;
@@ -1700,4 +1714,9 @@ footer {
 
 .button-dark {
   color:#ffffff;
+}
+
+.resume-first{
+  border-top:none;
+
 }
