@@ -745,8 +745,8 @@ img {
 
 .testimonial-grid {
   display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:18px;
+  grid-template-columns:repeat(3, minmax(280px, 1fr));
+  gap:8px;
     align-items:stretch;
 
 }
@@ -769,7 +769,7 @@ img {
 
 .testimonial-card>p {
   color:var(--muted);
-  font-size:16px;
+  font-size:14px;
   font-weight:500;
   line-height:1.8;
   margin:12px 0 22px;
@@ -1316,7 +1316,7 @@ footer {
   }
 
   .testimonial-card>p {
-    font-size:15px;
+    font-size:14px;
   }
 
   /* Resume */
