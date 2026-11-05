@@ -1458,7 +1458,7 @@ footer {
   content:"";
   position:absolute;
   left:7px;
-  top:4px;
+  top:8px;
   bottom:-18px;
   width:1px;
   background:var(--line);
@@ -1483,7 +1483,7 @@ footer {
   content:"";
   position:absolute;
   left:-34px;
-  top:50px;
+  top:40px;
   width:14px;
   height:14px;
   border-radius:50%;
